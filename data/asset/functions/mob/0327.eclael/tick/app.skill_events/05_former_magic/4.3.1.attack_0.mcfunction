@@ -1,0 +1,1 @@
+execute positioned ^ ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/4.3.2.attack_0_magic

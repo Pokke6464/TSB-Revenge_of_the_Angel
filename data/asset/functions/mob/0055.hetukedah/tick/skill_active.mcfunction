@@ -1,0 +1,19 @@
+#> asset:mob/0055.hetukedah/tick/skill_active
+#
+#
+#
+# @within function asset:mob/0055.hetukedah/tick/
+
+# 使用スキルの選択
+    execute if entity @s[tag=1J.Skill.Charge] run function asset:mob/0055.hetukedah/tick/skill/charge/tick
+    execute if entity @s[tag=1J.Skill.Summon] run function asset:mob/0055.hetukedah/tick/skill/summon/tick
+    execute if entity @s[tag=1J.Skill.Explosion] run function asset:mob/0055.hetukedah/tick/skill/explosion/tick
+    execute if entity @s[tag=1J.Skill.FlameThrower] run function asset:mob/0055.hetukedah/tick/skill/flamethrower/tick
+    execute if entity @s[tag=1J.Skill.ColdWave] run function asset:mob/0055.hetukedah/tick/skill/coldwave/tick
+    execute if entity @s[tag=1J.Skill.ShockWave] run function asset:mob/0055.hetukedah/tick/skill/shock_wave/tick
+    execute if entity @s[tag=1J.Skill.TiaLiat-kudan] run function asset:mob/0055.hetukedah/tick/skill/tia_liat-kudan/tick
+    execute if entity @s[tag=1J.Skill.ChangePhase] run function asset:mob/0055.hetukedah/tick/skill/change_phase/tick
+
+# おててビームはハードかどうかで分岐
+    execute unless predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=1J.Skill.OteteBeam] run function asset:mob/0055.hetukedah/tick/skill/otete_beam/tick
+    execute if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=1J.Skill.OteteBeam] run function asset:mob/0055.hetukedah/tick/skill/otete_beam/tick_hard

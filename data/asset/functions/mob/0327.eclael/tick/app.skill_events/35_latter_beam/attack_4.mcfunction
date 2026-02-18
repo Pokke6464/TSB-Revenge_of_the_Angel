@@ -1,0 +1,82 @@
+#> asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_4
+#
+# アニメーションのイベントハンドラ
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/main
+
+# TODO：演出を練る
+# 演出
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 1.2
+    playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 1.5
+    playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.2
+    execute positioned ^ ^1.6 ^ rotated ~90 ~-100 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/particle_slash
+    execute positioned ^ ^1.6 ^3 rotated ~90 ~-100 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/particle_slash
+    execute positioned ^ ^1.6 ^6 rotated ~90 ~-100 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/particle_slash
+
+# ターゲット取得
+    execute positioned ^ ^ ^-3 run tag @a[tag=!PlayerShouldInvulnerable,distance=..6] add 93.Temp.AttackTarget
+
+# TODO：与えるダメージの調整
+# ダメージ
+    # ダメージ量
+        data modify storage api: Argument.Damage set from storage asset:context this.Damage.BeamWhip
+    # 第一属性
+        data modify storage api: Argument.AttackType set value "Magic"
+    # 第二属性
+        data modify storage api: Argument.ElementType set value "Thunder"
+# 補正functionを実行
+    function api:damage/modifier
+# 対象にダメージ
+    execute as @a[tag=93.Temp.AttackTarget] run function api:damage/
+# MPを減少させる
+    execute as @a[tag=93.Temp.AttackTarget] run function asset:mob/0327.eclael/tick/app.general/mp_reduce.m {Percent:2}
+# リセット
+    function api:damage/reset
+    tag @a remove 93.Temp.AttackTarget
+
+# 演出
+    data modify storage api: Argument.ID set value 2001
+    data modify storage api: Argument.FieldOverride set value {Item:{id:"stick"},Color:16777088,Frames:[20502,20503,20504,20505],Scale:[18f,5f,20f],Transformation:{left_rotation:{axis:[0,0,1],angle:-1.74533f},right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
+    execute at @s run tp @s ~ ~ ~ ~-10 ~
+    execute positioned ^ ^2 ^-3 run function api:object/summon
+    execute at @s run tp @s ~ ~ ~ ~10 ~
+
+# 強化後半戦の雷
+    execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] positioned ^ ^ ^12 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack.m {Delay:0,Silent:"false"}
+    execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] rotated ~10 ~ positioned ^ ^ ^9 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack.m {Delay:0,Silent:"false"}
+    execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] rotated ~-10 ~ positioned ^ ^ ^9 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack.m {Delay:0,Silent:"false"}
+
+# 弾召喚
+    execute unless entity @s[tag=93.Skill.Beam.ReflectType] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:2190,Damage:"0",Angle:-1.74533f,SlowSpeed:"false"}
+    execute if entity @s[tag=93.Skill.Beam.ReflectType] run return run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:8002,Damage:"1",Angle:-1.74533f,SlowSpeed:"false"}
+
+# ライン斬撃
+    # 強化後半戦ver
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:10,PosY:0,PosZ:-1,IsGreen:"false"}
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:2.75,PosY:0,PosZ:-1,IsGreen:"true"}
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:-2.75,PosY:0,PosZ:-1,IsGreen:"true"}
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run return run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:-10,PosY:0,PosZ:-1,IsGreen:"false"}
+    # 通常ver
+        execute if predicate api:global_vars/difficulty/min/2_hard run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:9,PosY:0,PosZ:-1,IsGreen:"false"}
+        execute if predicate api:global_vars/difficulty/min/3_blessless run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:0,PosY:0,PosZ:-1,IsGreen:"true"}
+        execute if predicate api:global_vars/difficulty/min/2_hard run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:0,PosX:-9,PosY:0,PosZ:-1,IsGreen:"false"}
+        # summon area_effect_cloud ^ ^ ^ {Duration:1,Tags:["93.Temp.AttackRotation"]}
+        # execute as @e[type=area_effect_cloud,tag=93.Temp.AttackRotation,distance=..80] run tp @s ~ ~ ~ ~ 0
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.ID set value 2207
+        # execute if predicate api:global_vars/difficulty/min/3_blessless store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.IsGreen set value false
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Damage set from storage asset:context this.Damage.BeamSlash
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Rotation set from entity @e[type=area_effect_cloud,tag=93.Temp.AttackRotation,distance=..80,limit=1] Rotation[0]
+        # execute if predicate api:global_vars/difficulty/min/3_blessless positioned ^9 ^ ^-1 run function api:object/summon
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.ID set value 2207
+        # execute if predicate api:global_vars/difficulty/min/3_blessless store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.IsGreen set value true
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Damage set from storage asset:context this.Damage.BeamSlash
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Rotation set from entity @e[type=area_effect_cloud,tag=93.Temp.AttackRotation,distance=..80,limit=1] Rotation[0]
+        # execute if predicate api:global_vars/difficulty/min/3_blessless positioned ^ ^ ^-1 run function api:object/summon
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.ID set value 2207
+        # execute if predicate api:global_vars/difficulty/min/3_blessless store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.IsGreen set value false
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Damage set from storage asset:context this.Damage.BeamSlash
+        # execute if predicate api:global_vars/difficulty/min/3_blessless run data modify storage api: Argument.FieldOverride.Rotation set from entity @e[type=area_effect_cloud,tag=93.Temp.AttackRotation,distance=..80,limit=1] Rotation[0]
+        # execute if predicate api:global_vars/difficulty/min/3_blessless positioned ^-9 ^ ^-1 run function api:object/summon

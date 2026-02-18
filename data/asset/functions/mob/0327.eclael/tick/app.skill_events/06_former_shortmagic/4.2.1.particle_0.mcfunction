@@ -1,0 +1,21 @@
+playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 1 2
+particle end_rod ^0 ^ ^-1.2 0 0 0 0 1
+particle end_rod ^0.37082 ^ ^-1.14127 0 0 0 0 1
+particle end_rod ^0.70534 ^ ^-0.97082 0 0 0 0 1
+particle end_rod ^0.97082 ^ ^-0.70534 0 0 0 0 1
+particle end_rod ^1.14127 ^ ^-0.37082 0 0 0 0 1
+particle end_rod ^1.2 ^ ^0 0 0 0 0 1
+particle end_rod ^1.14127 ^ ^0.37082 0 0 0 0 1
+particle end_rod ^0.97082 ^ ^0.70534 0 0 0 0 1
+particle end_rod ^0.70534 ^ ^0.97082 0 0 0 0 1
+particle end_rod ^0.37082 ^ ^1.14127 0 0 0 0 1
+particle end_rod ^0 ^ ^1.2 0 0 0 0 1
+particle end_rod ^-0.37082 ^ ^1.14127 0 0 0 0 1
+particle end_rod ^-0.70534 ^ ^0.97082 0 0 0 0 1
+particle end_rod ^-0.97082 ^ ^0.70534 0 0 0 0 1
+particle end_rod ^-1.14127 ^ ^0.37082 0 0 0 0 1
+particle end_rod ^-1.2 ^ ^0 0 0 0 0 1
+particle end_rod ^-1.14127 ^ ^-0.37082 0 0 0 0 1
+particle end_rod ^-0.97082 ^ ^-0.70534 0 0 0 0 1
+particle end_rod ^-0.70534 ^ ^-0.97082 0 0 0 0 1
+particle end_rod ^-0.37082 ^ ^-1.14127 0 0 0 0 1

@@ -1,0 +1,2 @@
+execute positioned as @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] run tp @s ~ ~0.5 ~ ~ 0
+kill @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80]

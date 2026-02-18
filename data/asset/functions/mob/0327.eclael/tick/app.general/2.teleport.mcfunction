@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ #lib:no_collision run tp @s ~ ~ ~ ~ ~

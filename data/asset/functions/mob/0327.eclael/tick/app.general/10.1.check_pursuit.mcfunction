@@ -1,0 +1,2 @@
+execute if predicate api:global_vars/difficulty/min/3_blessless if entity @a[distance=..5] run function asset:mob/0327.eclael/tick/app.general/10.2.start_pursuit_animation
+tag @s remove 93.Temp.AttackHit

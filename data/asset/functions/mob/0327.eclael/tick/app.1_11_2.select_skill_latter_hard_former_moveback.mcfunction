@@ -1,0 +1,2 @@
+execute unless entity @e[type=marker,tag=93.Marker.SpawnPoint,distance=..30] run tag @s add 93.Skill.Latter.Move.Back
+execute if entity @s[tag=!93.Skill.Latter.Move.Back] run scoreboard players add @s 93.ActionCount 1

@@ -1,0 +1,2 @@
+execute if entity @a[distance=..12] run function asset:mob/0327.eclael/tick/app.1_4.select_skill_latter_attack_near
+execute unless entity @a[distance=..12] run function asset:mob/0327.eclael/tick/app.1_5.select_skill_latter_attack_far

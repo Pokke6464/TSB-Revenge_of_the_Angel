@@ -1,0 +1,1 @@
+execute as @e[type=item_display,tag=93.ModelRoot.Target,distance=..80,sort=nearest,limit=1] run function animated_java:eclael/animations/4_1_former_upper_shot/tween {duration:1, to_frame: 1}

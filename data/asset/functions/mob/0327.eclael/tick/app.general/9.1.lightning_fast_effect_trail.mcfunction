@@ -1,0 +1,2 @@
+particle dust 100000000 100000000 1 3 ~ ~ ~ 0.1 0.1 0.1 0 3
+execute unless entity @s[distance=..1] positioned ^ ^ ^0.5 run function asset:mob/0327.eclael/tick/app.general/9.1.lightning_fast_effect_trail

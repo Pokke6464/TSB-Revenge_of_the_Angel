@@ -1,0 +1,2 @@
+execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/00_former_idle/3.play_animation
+execute if score @s 93.AnimationTimer matches 61.. run function asset:mob/0327.eclael/tick/app.skill_events/00_former_idle/2.end

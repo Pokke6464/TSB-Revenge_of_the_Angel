@@ -1,0 +1,1 @@
+summon wither_skeleton ~ ~ ~ {Tags:["MobInit","93.EntityRoot","ProcessCommonTag","AlwaysInvisible"],DeathLootTable:"minecraft:empty",NoAI:1b,Silent:1b}

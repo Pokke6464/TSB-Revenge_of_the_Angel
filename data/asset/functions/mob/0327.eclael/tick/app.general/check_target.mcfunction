@@ -1,0 +1,3 @@
+execute store result storage asset:temp 93.TargetUserId int 1 run scoreboard players get @s 93.TargetUserId
+function asset:mob/0327.eclael/tick/app.general/check_target.m with storage asset:temp 93
+data remove storage asset:temp 93
