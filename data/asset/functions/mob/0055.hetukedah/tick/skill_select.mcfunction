@@ -27,7 +27,7 @@
         execute if predicate api:global_vars/difficulty/max/2_hard if entity @s[tag=1J.Phase.2] run scoreboard players add @s 1J.MoveCount 1
         execute if predicate api:global_vars/difficulty/min/3_blessless run scoreboard players add @s 1J.MoveCount 1
     # デバッグ
-        #scoreboard players set $Random Temporary 1
+        #scoreboard players set $Random Temporary 3
         #scoreboard players set @s 1J.MoveCount 5
     # 数回に一回の行動は固定(フェーズ1では5カウント、2なら通常は10カウントでリセット)
         execute if score @s 1J.MoveCount matches 5 run tag @s add 1J.Skill.Summon

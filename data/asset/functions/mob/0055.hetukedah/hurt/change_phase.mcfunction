@@ -11,6 +11,8 @@
 # HPが半分を切っていなければここで終了
     execute unless score $HealthPer Temporary matches ..50 run return run scoreboard players reset $HealthPer Temporary
 
+
+
 # 行動キャンセル
     function asset:mob/0055.hetukedah/tick/reset
 

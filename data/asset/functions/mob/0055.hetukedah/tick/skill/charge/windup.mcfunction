@@ -13,5 +13,9 @@
 # ループカウントを0に
     scoreboard players set @s 1J.LoopCount 0
 
+# フェーズ2では難易度に応じてループ回数にブレを出す
+    execute if predicate api:global_vars/difficulty/max/2_hard store result score @s[tag=1J.Phase.2] 1J.LoopCount run random value -1..0
+    execute if predicate api:global_vars/difficulty/min/3_blessless store result score @s[tag=1J.Phase.2] 1J.LoopCount run random value -2..1
+
 # NoAIにする
     data merge entity @s {NoAI:1b}

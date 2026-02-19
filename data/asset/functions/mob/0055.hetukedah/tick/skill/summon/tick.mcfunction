@@ -4,7 +4,6 @@
 #
 # @within function asset:mob/0055.hetukedah/tick/skill_active
 
-
 # 予備動作
     execute if score @s General.Mob.Tick matches 0 run function asset:mob/0055.hetukedah/tick/skill/summon/windup
 
