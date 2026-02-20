@@ -1,0 +1,8 @@
+#> asset:object/alias/8050/attack
+#
+# メソッド処理のエイリアス
+#
+# @within asset_manager:object/call_method/run_method.m
+
+# 本来の処理を呼び出す
+    function asset:object/8050.lawless_slam_shock_wave/attack/
