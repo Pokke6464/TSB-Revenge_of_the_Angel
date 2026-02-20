@@ -15,8 +15,7 @@
 # 名前 (TextComponentString) (オプション)
     data modify storage asset:mob Name set value '[{"text":"エクレール","color":"#91f9ab"},{"text":"\\u0002","font":"space"},{"text":"EX","color":"#91f9ab"}]'
 # Mobの説明文 (TextComponentString[]) (オプション)
-    execute unless data storage mou: firstJoin run data modify storage asset:mob Lore set value ['{"text":"いつものように眠そうだが、今日は少し元気な様子。"}','{"text":"しかし呑気に眺めることはオススメしない。"}','{"text":"なぜなら、元気な理由は邪魔者を消し去り早く眠るためだからだ。"}']
-    execute if data storage mou: firstJoin run data modify storage asset:mob Lore set value ['{"text":"いつものように眠そうだが、今日はそれなりに元気な様子。"}','{"text":"しかし呑気に眺めることはオススメしない。なぜなら..."}','{"text":"\\"困難\\"を\\"二度\\"も望んだ貴方は、隙を見せれば空の塵となるからだ。","color":"dark_red"}']
+    data modify storage asset:mob Lore set value ['{"text":"いつものように眠そうだが、今日は少し元気な様子。"}','{"text":"しかし呑気に眺めることはオススメしない。"}','{"text":"なぜなら、元気な理由は邪魔者を消し去り早く眠るためだからだ。"}']
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 250000
 # ノックバック耐性 (double) (オプション)

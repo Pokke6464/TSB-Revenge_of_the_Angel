@@ -1,6 +1,6 @@
 #> asset:mob/0055.hetukedah/tick/skill/change_phase/change_form
 #
-# フェーズ2へ移行
+#
 #
 # @within function asset:mob/0055.hetukedah/tick/skill/change_phase/tick
 
