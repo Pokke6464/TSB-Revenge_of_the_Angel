@@ -32,6 +32,7 @@
     #declare tag C5.Skill.SuperSlam
     #declare tag C5.Skill.SuperLaser
     #declare tag C5.Skill.Walk
+    #declare tag C5.Skill.Slam 通常叩き付け攻撃(RotA)
 
 #> ボスの状態に関するタグ
 # @within function asset:mob/0437.lawless_iron_doll/**
@@ -43,6 +44,9 @@
 # @within function asset:mob/0437.lawless_iron_doll/**
     #declare tag Hit
     #declare tag C5.TargetEntity
+    #declare tag C5.JumpFar 通常叩き付け攻撃で遠くまでジャンプする(RotA)
+    #declare tag C5.LoopCount.1 ループ1回目(RotA)
+    #declare tag C5.LoopCount.2 ループ2回目(RotA)
 
 #> AJ
 # @within function asset:mob/0437.lawless_iron_doll/**

@@ -19,9 +19,9 @@
 # ただし冒頭のみで、すぐに無敵でなくなる
     data modify storage asset:mob Interferable set value false
 # 名前 (TextComponentString) (オプション)
-    data modify storage asset:mob Name set value '{"text":"無法の鉄巨人","color":"white"}'
+    data modify storage asset:mob Name set value '[{"text":"無法の鉄巨人","color":"white"},{"text":"\\u0002","font":"space"},{"text":"EX","color":"white"}]'
 # Mobの説明文 (TextComponentString[]) (オプション)
-    data modify storage asset:mob Lore set value ['{"text":"元々は名も知れぬ博物館の展示品。今は呪われた神器を守っているぞ。","color":"white"}','{"text":"いったい何が「無法」なのかはわからないが、攻撃が強烈なのは確かだ。","color":"white"}','{"text":"だが、一部の攻撃は飛び越えることでも回避できるかもしれない。","color":"white"}']
+    data modify storage asset:mob Lore set value ['{"text":"巨体での全力ダッシュに、ジャンプからの叩きつけ！","color":"white"}','{"text":"相変わらず何が「無法」なのかはわからないが、","color":"white"}','{"text":"侵入者の排除のためなら博物館なんてどうでもいいようだ。","color":"white"}']
 # 体力 (double) (オプション)
     data modify storage asset:mob Health set value 175000
 # 属性倍率 // 1.0fで100% 最低でも25%は軽減されずに入る
@@ -50,6 +50,10 @@
                 data modify storage asset:mob Field.Damage.Charge set value 50f
             # 衝撃波
                 data modify storage asset:mob Field.Damage.ShockWave set value 40f
+            # 通常叩き付け攻撃 (叩き付け部分)
+                data modify storage asset:mob Field.Damage.Slam set value 55f
+            # 通常叩き付け攻撃 (衝撃波部分)
+                data modify storage asset:mob Field.Damage.SlamShockWave set value 35f
             # スーパー叩きつけ攻撃
                 data modify storage asset:mob Field.Damage.SuperSlam set value 60f
             # 接触ダメージ

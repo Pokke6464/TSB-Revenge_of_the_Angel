@@ -24,11 +24,16 @@
     tag @s remove C5.Skill.LingeringLaser
     tag @s remove C5.Skill.Charge
     tag @s remove C5.Skill.Walk
+    tag @s remove C5.Skill.Slam
 
     tag @s remove C5.Skill.SuperLaser
     tag @s remove C5.Skill.SuperSlam
 
     tag @s remove C5.InAction
+
+    tag @s remove C5.JumpFar
+    tag @s remove C5.LoopCount.1
+    tag @s remove C5.LoopCount.2
 
 # ヒットリストを削除
     data remove storage asset:context this.HitList
