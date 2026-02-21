@@ -29,7 +29,6 @@
     execute if score @s General.Mob.Tick matches 40 positioned as @e[type=marker,tag=C5.Marker.SlamPoint] run tp @s ~ ~ ~
 
 # 攻撃
-    execute if score @s General.Mob.Tick matches 42 at @s align y run tp @s ~ ~ ~
     execute if score @s General.Mob.Tick matches 42 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/attack
 
 # 後半戦ではHardなら+1回、Blesslessなら+2回連続攻撃
