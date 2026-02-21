@@ -12,7 +12,6 @@
         execute if entity @s[tag=C5.Skill.ShockWave] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/shockwave/tick
         execute if entity @s[tag=C5.Skill.ChaserShot] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/chaser_shot/tick
         execute if entity @s[tag=C5.Skill.LingeringLaser] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/tick
-        execute if entity @s[tag=C5.Skill.Slam] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/tick
     # 必殺技
         execute if entity @s[tag=C5.Skill.SuperSlam] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/super_slam/tick
         execute if entity @s[tag=C5.Skill.SuperLaser] run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/super_laser/tick
