@@ -13,8 +13,10 @@
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.0
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
 
-# Blesslessなら近くにプレイヤーが居ない場合ジャンプ距離を伸ばす
-    execute if predicate api:global_vars/difficulty/min/3_blessless unless entity @a[tag=!PlayerShouldInvulnerable,distance=..10] run tag @s add C5.JumpFar
+# 後半戦なら近くにプレイヤーが居ない場合ジャンプ距離を伸ばす
+    execute if score @s C5.Phase matches 2.. unless entity @a[tag=!PlayerShouldInvulnerable,distance=..10] run tag @s add C5.JumpFar
+    # Blesslessなら前半戦でもやる
+        execute if predicate api:global_vars/difficulty/min/3_blessless unless entity @a[tag=!PlayerShouldInvulnerable,distance=..10] run tag @s add C5.JumpFar
 
 # 最寄りのプレイヤーを見る
     execute facing entity @p[gamemode=!spectator,distance=..256] feet run tp @s ~ ~ ~ ~ ~

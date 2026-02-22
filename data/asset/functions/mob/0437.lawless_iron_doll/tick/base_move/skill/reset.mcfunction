@@ -35,5 +35,8 @@
     tag @s remove C5.LoopCount.1
     tag @s remove C5.LoopCount.2
 
+# 通常叩き付け攻撃のマーカーを削除(フェーズ移行時の対策)
+    kill @e[type=marker,tag=C5.Marker.SlamPoint,distance=..256]
+
 # ヒットリストを削除
     data remove storage asset:context this.HitList

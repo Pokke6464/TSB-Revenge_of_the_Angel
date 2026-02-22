@@ -18,7 +18,7 @@
     execute as @a[tag=!PlayerShouldInvulnerable,distance=..5] run function api:damage/
     function api:damage/reset
 
-# 衝撃波を召喚
+# 衝撃波
     data modify storage api: Argument.ID set value 8050
     data modify storage api: Argument.FieldOverride.SkipTick set value 3
     data modify storage api: Argument.FieldOverride.HitboxDelay set value 4
@@ -38,5 +38,5 @@
     execute if predicate api:area/is_breakable positioned ~ ~3 ~ run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/break
 
 # パーティクル
-    particle large_smoke ~ ~0.1 ~ 2 0 2 0.1 30
-    particle explosion ~ ~0.1 ~ 2 0.5 2 1 15
+    particle large_smoke ~ ~0.1 ~ 2.5 0 2.5 0.1 30
+    particle explosion ~ ~0.1 ~ 2.5 0.5 2.5 1 15

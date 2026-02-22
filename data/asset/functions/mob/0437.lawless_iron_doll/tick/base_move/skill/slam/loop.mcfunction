@@ -14,7 +14,7 @@
 # アニメ再生
     execute as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_slam/tween {to_frame: 28, duration: 4}
 
-# Blesslessで近くにプレイヤーが居なければジャンプ距離を伸ばす
+# Blesslessなら近くにプレイヤーが居ない場合ジャンプ距離を伸ばす
     tag @s remove C5.JumpFar
     execute if predicate api:global_vars/difficulty/min/3_blessless unless entity @a[tag=!PlayerShouldInvulnerable,distance=..10] run tag @s add C5.JumpFar
 

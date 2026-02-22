@@ -6,14 +6,15 @@
 
 # デバッグ用処理: 技を名指しで指定
 # TODO: ちゃんと消すんだよ！
-    tag @s add C5.Skill.Slam
-    return fail
+#    tag @s add C5.Skill.ShockWave
+#    return fail
 
 # 技を選択
     execute if data storage asset:context this.Skill{Get:0} run tag @s add C5.Skill.Charge
     execute if data storage asset:context this.Skill{Get:1} run tag @s add C5.Skill.ChaserShot
     execute if data storage asset:context this.Skill{Get:2} run tag @s add C5.Skill.LingeringLaser
     execute if data storage asset:context this.Skill{Get:3} run tag @s add C5.Skill.VerticalSlashShot
+    execute if data storage asset:context this.Skill{Get:80} run tag @s add C5.Skill.Slam
 # 一部難易度では使用に条件が入るもの
     execute if data storage asset:context this.Skill{Get:4} run tag @s add C5.Skill.HorizontalSlashShot
     execute if data storage asset:context this.Skill{Get:5} run tag @s add C5.Skill.ShockWave
