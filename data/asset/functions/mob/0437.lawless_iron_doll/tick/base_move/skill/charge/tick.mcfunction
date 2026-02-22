@@ -18,6 +18,11 @@
     execute if score @s General.Mob.Tick matches 9..10 rotated ~ 0 run tp @s ^ ^-0.2 ^-1
     execute if score @s General.Mob.Tick matches 11 rotated ~ 0 run tp @s ^ ^-0.1 ^-1
 
+# 自重消失モードなら確率で横にぶれるようになる
+    execute if score @s General.Mob.Tick matches 11 if data storage rota: {RuthlessMode:1b} if predicate lib:random_pass_per/50 run return fail
+    execute if score @s General.Mob.Tick matches 11 if data storage rota: {RuthlessMode:1b} at @s run tp @s ~ ~ ~ ~35 ~
+    execute if score @s General.Mob.Tick matches 11 if data storage rota: {RuthlessMode:1b} if predicate lib:random_pass_per/50 at @s run tp @s ~ ~ ~ ~-70 ~
+
 # 突進アニメ再生
     execute if score @s General.Mob.Tick matches 12 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/run2/tween {to_frame: 0, duration: 5}
 
