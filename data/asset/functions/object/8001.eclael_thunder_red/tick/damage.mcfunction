@@ -58,7 +58,7 @@
     execute rotated ~320 0 run particle end_rod ~ ~ ~ ^ ^ ^100000000 0.000000008 0
     execute rotated ~340 0 run particle end_rod ~ ~ ~ ^ ^ ^100000000 0.000000008 0
 
-# ReduceParticleがtrueの場合はここで止める
+# ReduceParticleがtrueの場合はここでreturn
     execute if data storage asset:context this{ReduceParticle:true} run return 0
 
 # 円 2

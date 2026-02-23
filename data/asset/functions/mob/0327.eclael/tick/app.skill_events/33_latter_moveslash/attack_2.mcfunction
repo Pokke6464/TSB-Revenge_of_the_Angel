@@ -45,7 +45,7 @@
     data modify storage api: Argument.FieldOverride set value {Item:{id:"stick"},Color:16777088,Frames:[20502,20503,20504],Scale:[8f,1f,3f],Transformation:{left_rotation:{axis:[0,0,1],angle:-0.2f},right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
     execute rotated ~240 ~-80 positioned ^ ^0 ^2 run function api:object/summon
 
-# 強化後半戦ではないならここで止める
+# 強化後半戦ではないならここでreturn
     execute unless entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run return 0
 
 # 周囲に雷を降らせる

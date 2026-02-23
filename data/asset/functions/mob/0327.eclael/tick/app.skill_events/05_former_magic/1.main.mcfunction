@@ -36,7 +36,7 @@
     # 終了
         execute if score @s[tag=!93.Skill.Former.Magic.MovingType] 93.AnimationTimer matches 126.. run function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/2.end
 
-# 折り返しパターンならここで処理を止める
+# 折り返しパターンならここでreturn
     execute if entity @s[tag=!93.Skill.Former.Magic.MovingType] run return 0
 
 # 予告範囲が動くパターン

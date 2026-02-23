@@ -32,7 +32,7 @@
     playsound minecraft:item.trident.throw hostile @a ~ ~ ~ 2 0.6
     playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 1 1.5
 
-# 前半戦ならここで止める
+# 前半戦ならここでreturn
     execute if score @s C5.Phase matches 1 run return fail
 
 # オブジェクト召喚

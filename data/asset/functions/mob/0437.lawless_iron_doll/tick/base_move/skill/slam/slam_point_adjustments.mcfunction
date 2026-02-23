@@ -6,7 +6,7 @@
 #   asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/windup
 #   asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
 
-# マーカーから3ブロック上が埋まっているならここで止める
+# マーカーから3ブロック上が埋まっているならここでreturn
     execute at @s unless block ~ ~3 ~ #lib:no_collision run return fail
 
 # 3ブロックまでの段差なら登る

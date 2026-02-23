@@ -36,7 +36,7 @@
 # 最寄りのプレイヤーの位置に攻撃地点を設定
     execute at @p[tag=!PlayerShouldInvulnerable,distance=..80] run summon area_effect_cloud ^ ^ ^ {Duration:30,Tags:["93.Temp.AttackPosition"]}
 
-# 強化後半戦ではないならここで止める
+# 強化後半戦ではないならここでreturn
     execute unless entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run return 0
 
 # 円形に雷を降らせる / facingがある理由は確実にプレイヤーに当てるため

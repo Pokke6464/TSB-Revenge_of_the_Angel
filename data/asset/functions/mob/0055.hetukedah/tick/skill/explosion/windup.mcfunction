@@ -12,7 +12,7 @@
     playsound minecraft:entity.blaze.shoot hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:entity.ravager.celebrate hostile @a ~ ~ ~ 2 2
 
-# 難易度がNormalならここで止める
+# 難易度がNormalならここでreturn
     execute if predicate api:global_vars/difficulty/1_normal run return fail
 
 # タイプの切り替え
