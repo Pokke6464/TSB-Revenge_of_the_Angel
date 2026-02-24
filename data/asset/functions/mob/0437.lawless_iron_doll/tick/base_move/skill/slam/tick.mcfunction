@@ -26,7 +26,7 @@
     execute if score @s General.Mob.Tick matches 40 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_slam/tween {to_frame: 55, duration: 2}
 
 # マーカーへtp(落下)
-    execute if score @s General.Mob.Tick matches 40 positioned as @e[type=marker,tag=C5.Marker.SlamPoint] run tp @s ~ ~ ~
+    execute if score @s General.Mob.Tick matches 40 positioned as @e[type=marker,tag=C5.Marker.SlamPoint,distance=..256,limit=1] run tp @s ~ ~ ~
 
 # 攻撃
     execute if score @s General.Mob.Tick matches 42 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/attack
@@ -35,9 +35,8 @@
     execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/max/2_hard if entity @s[tag=C5.LoopCount.1,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
     execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=C5.LoopCount.2,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
     execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/min/2_hard if entity @s[scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
-
-# 自重消失モードなら75%を引き続ける限りループする
-    execute if score @s General.Mob.Tick matches 50 if data storage rota: {RuthlessMode:1b} if predicate lib:random_pass_per/75 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
+    # 自重消失モードなら75%を引き続ける限りループする
+        execute if score @s General.Mob.Tick matches 50 if entity @s[scores={C5.Phase=2..}] if data storage rota: {RuthlessMode:1b} if predicate lib:random_pass_per/75 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
 
 # リセット
     execute if score @s General.Mob.Tick matches 75.. run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset

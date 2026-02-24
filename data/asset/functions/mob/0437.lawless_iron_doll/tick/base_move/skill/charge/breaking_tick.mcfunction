@@ -10,13 +10,20 @@
 # サウンド
     execute if score @s General.Mob.Tick matches 30 run playsound ogg:mob.breeze.slide4 hostile @a ~ ~ ~ 1 0.5
 
+# マーカーで慣性の方向を決めておく(追撃時に向きが変わって滑る方向が変化するのを防ぐため)
+    execute if score @s General.Mob.Tick matches 30 run summon marker ~ ~ ~ {Tags:["C5.Marker","C5.Marker.DirectionOfInertia"]}
+    execute if score @s General.Mob.Tick matches 30 run tp @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] ~ ~ ~ ~ 0
+
 # なんちゃって慣性
-    execute if score @s General.Mob.Tick matches 30..32 run tp @s ^ ^ ^0.7 ~ 0
-    execute if score @s General.Mob.Tick matches 33..35 run tp @s ^ ^ ^0.5 ~ 0
-    execute if score @s General.Mob.Tick matches 36..37 run tp @s ^ ^ ^0.4 ~ 0
-    execute if score @s General.Mob.Tick matches 38..40 run tp @s ^ ^ ^0.3 ~ 0
-    execute if score @s General.Mob.Tick matches 41..43 run tp @s ^ ^ ^0.2 ~ 0
-    execute if score @s General.Mob.Tick matches 44..45 run tp @s ^ ^ ^0.1 ~ 0
+    execute if score @s General.Mob.Tick matches 30..32 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.7
+    execute if score @s General.Mob.Tick matches 33..35 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.5
+    execute if score @s General.Mob.Tick matches 36..37 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.4
+    execute if score @s General.Mob.Tick matches 38..40 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.3
+    execute if score @s General.Mob.Tick matches 41..43 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.2
+    execute if score @s General.Mob.Tick matches 44..45 rotated as @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1] rotated ~ 0 run tp @s ^ ^ ^0.1
+
+# マーカー削除
+    execute if score @s General.Mob.Tick matches 45 run kill @e[type=marker,tag=C5.Marker.DirectionOfInertia,distance=..256,limit=1]
 
 # パーティクル
     execute rotated ~ 0 positioned ^ ^ ^0.5 run particle crit ~ ~ ~ 0.5 0 0.5 0.5 5

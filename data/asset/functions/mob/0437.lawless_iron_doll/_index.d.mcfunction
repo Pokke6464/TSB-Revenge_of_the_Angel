@@ -12,6 +12,7 @@
     #declare tag C5.Marker.SpawnPoint
     #declare tag C5.Marker.SummonPoint
     #declare tag C5.Marker.SlamPoint
+    #declare tag C5.Marker.DirectionOfInertia 慣性の方向の保存用(RotA)
     #declare tag C5.Marker.Target
 
 #> ボスのムーブに関するタグ
