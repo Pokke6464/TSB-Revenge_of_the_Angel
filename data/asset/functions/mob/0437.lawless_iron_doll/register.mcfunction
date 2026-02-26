@@ -64,6 +64,8 @@
                 data modify storage asset:mob Field.Damage.ChaserShot set value 35f
             # 残留レーザー（残留判定）
                 data modify storage asset:mob Field.Damage.LingeringLaser set value 5f
+            # 残留ミスト
+                data modify storage asset:mob Field.Damage.LingeringMist set value 5f
             # スーパーレーザー攻撃(オマケ)
                 data modify storage asset:mob Field.Damage.SuperLaserSub set value 20f
             # スーパーレーザー攻撃(メイン)

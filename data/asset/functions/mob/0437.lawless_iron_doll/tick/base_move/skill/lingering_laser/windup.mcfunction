@@ -12,3 +12,7 @@
     playsound minecraft:item.axe.scrape hostile @a ~ ~ ~ 2 1.5
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.0
     playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
+
+# タイプ切り替え
+    execute if entity @s[tag=C5.Skill.LingeringLaser.MistType] run return run tag @s remove C5.Skill.LingeringLaser.MistType
+    tag @s add C5.Skill.LingeringLaser.MistType

@@ -30,6 +30,7 @@
     #declare tag C5.Skill.ChaserShot
     #declare tag C5.Skill.TeleportSlam
     #declare tag C5.Skill.LingeringLaser
+    #declare tag C5.Skill.LingeringLaser.MistType 残留レーザー攻撃のミストタイプ(RotA)
     #declare tag C5.Skill.SuperSlam
     #declare tag C5.Skill.SuperLaser
     #declare tag C5.Skill.Walk
