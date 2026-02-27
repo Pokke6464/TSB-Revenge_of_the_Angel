@@ -27,6 +27,7 @@
     #declare tag C5.Skill.VerticalSlashShot
     #declare tag C5.Skill.Charge
     #declare tag C5.Skill.ShockWave
+    #declare tag C5.Skill.ShockWave.BigType 衝撃波攻撃の巨大タイプ(RotA)
     #declare tag C5.Skill.ChaserShot
     #declare tag C5.Skill.TeleportSlam
     #declare tag C5.Skill.LingeringLaser
