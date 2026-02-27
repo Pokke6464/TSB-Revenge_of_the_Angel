@@ -15,7 +15,9 @@
 # 動きを遅くする
     effect give @s slowness 17 1 true
 
-# ダメージ50%カット
-    effect give @s resistance 24 4 true
-
-#scoreboard players set @s General.Mob.Tick 229
+# ダメージ軽減
+    data modify storage api: Argument.ID set value 150
+    data modify storage api: Argument.Duration set value 480
+    data modify storage api: Argument.Stack set value 5
+    function api:entity/mob/effect/give
+    function api:entity/mob/effect/reset
