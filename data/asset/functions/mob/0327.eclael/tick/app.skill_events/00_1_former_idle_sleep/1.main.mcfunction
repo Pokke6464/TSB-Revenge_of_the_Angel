@@ -17,13 +17,8 @@
 ## 居眠り
 # animated javaアニメーション再生 (長さ：65tick)
     execute if score @s 93.AnimationTimer matches 94 run function asset:mob/0327.eclael/tick/app.skill_events/00_1_former_idle_sleep/3.2.play_sleep_animation
-# 攻撃されていない場合，回復後に引き続き眠る
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run data modify storage api: Argument.Heal set value 300f
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run data modify storage api: Argument.FixedHeal set value true
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run function api:heal/
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run function api:heal/reset
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run function asset:mob/2000.abstract_angel/update_bossbar/
-    execute if score @s 93.AnimationTimer matches 131 if entity @s[tag=!93.Temp.SleepDamage] run scoreboard players set @s 93.AnimationTimer 65
+# 攻撃されていない場合，回復して引き続き眠る
+    execute if entity @s[tag=!93.Temp.SleepDamage] if score @s 93.AnimationTimer matches 131 run function asset:mob/0327.eclael/tick/app.skill_events/00_1_former_idle_sleep/4.loop
 
 ## 起床
 # animated javaアニメーション再生 (長さ：74tick)

@@ -2,7 +2,7 @@
 #
 # 汎用処理 怯みアニメーションを再生開始する
 #
-# @within function asset:mob/0327.eclael/hurt/last_attack_start
+# @within function asset:mob/0327.eclael/hurt/start_last_attack
 
 # アニメーション再生停止
     function asset:mob/0327.eclael/tick/app.general/3.stop_all_animations

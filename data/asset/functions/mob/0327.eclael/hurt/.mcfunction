@@ -12,7 +12,7 @@
 
 # フェーズ変更
     execute if entity @s[tag=!93.Phase.Latter] run function asset:mob/0327.eclael/hurt/app.1.change_phase
-    execute if entity @s[tag=93.Phase.Latter,tag=!93.Phase.Latter.Extra] if predicate api:global_vars/difficulty/min/3_blessless run function asset:mob/0327.eclael/hurt/app.2.change_phase_extra
+    execute if entity @s[tag=93.Phase.Latter,tag=!93.Phase.Latter.Extra] if predicate api:global_vars/difficulty/min/3_blessless run function asset:mob/0327.eclael/hurt/app.3.change_phase_extra
 
 # 自重消失モード限定の最後の切り札
     execute if data storage rota: {RuthlessMode:1b} if entity @s[tag=!93.LowHP] run function asset:mob/0327.eclael/hurt/start_last_attack

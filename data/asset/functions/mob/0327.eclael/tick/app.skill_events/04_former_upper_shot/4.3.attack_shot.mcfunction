@@ -1,7 +1,17 @@
-playsound entity.wither.shoot hostile @a ~ ~ ~ 1 1.8
-playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
-playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
-particle flash ~ ~ ~ 0 0 0 0 1
+#> asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.3.attack_shot
+#
+# アニメーションのイベントハンドラ 前半・射撃 発射
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/1.main
+
+# 演出
+    playsound entity.wither.shoot hostile @a ~ ~ ~ 1 1.8
+    playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
+    playsound item.trident.riptide_1 hostile @a ~ ~ ~ 1 1.8
+    particle flash ~ ~ ~ 0 0 0 0 1
+
+# [ImportKey]: NobwRALgngDgpmAXGANgSwHYIDRgK55oAmSYAjAGxEAcZAnHQMYC01ADAExHMAsAhnR6sARnDbMA7AFYp1RhSlMpRKWFwY+AWwTJAW74ACMmrAw+AJy0BnJOEYB7PBghIpbXADMzdzTbAA3PhQ8HXAADyQ3MCgIgF8Y3Ag7XwCgkLBwxEjoxDIpONw7d3dLOGdM3FEALzQ4MwjcNEsAIThq2oBRAEc8QJQoAGVTRjgSRHdAkriAXSA_3
+# 線 1
 particle dust 100000000 100000000 1 2 ^0 ^ ^0 0.1 0.1 0.1 0 2
 particle dust 100000000 100000000 1 2 ^0 ^ ^0.30612 0.1 0.1 0.1 0 2
 particle dust 100000000 100000000 1 2 ^0 ^ ^0.61224 0.1 0.1 0.1 0 2

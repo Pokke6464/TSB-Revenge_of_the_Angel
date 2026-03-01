@@ -91,6 +91,9 @@
     execute if entity @s[tag=93.Skill.UpperShot] run function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main
     execute if entity @s[tag=93.Skill.UpperShot.Turn] run function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main_turn
 
+###########################################################################
+## RotAでの追加
+
 # 光速攻撃
     execute if entity @s[tag=93.Skill.LightSpeedAttack] run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/main
 

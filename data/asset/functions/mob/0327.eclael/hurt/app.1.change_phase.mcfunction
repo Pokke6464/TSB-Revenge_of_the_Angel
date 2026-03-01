@@ -5,8 +5,9 @@
 # @within function asset:mob/0327.eclael/hurt/
 
 
-# 体力検知
+# 体力が半分以下かどうかを検知する
     function api:mob/get_health_percent
+# 代入する
     execute store result score $HealthPer Temporary run data get storage api: Return.HealthPer 100
 
 # 難易度に応じて後半戦に移行

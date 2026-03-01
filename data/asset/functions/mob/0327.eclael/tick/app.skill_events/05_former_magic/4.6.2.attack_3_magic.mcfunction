@@ -1,9 +1,9 @@
-#> asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/4.5.2.attack_2_magic
+#> asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/4.6.2.attack_3_magic
 #
 # アニメーションのイベントハンドラ 前半・射撃 発射
 #
 # @within
-#   function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/4.5.1.attack_2
+#   function asset:mob/0327.eclael/tick/app.skill_events/05_former_magic/4.6.1.attack_3
 #   function asset:mob/0327.eclael/debug_damage
 
 # 攻撃位置決定

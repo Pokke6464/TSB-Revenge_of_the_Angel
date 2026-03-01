@@ -1,4 +1,4 @@
-#> asset:mob/0327.eclael/hurt/app.2.change_phase_extra
+#> asset:mob/0327.eclael/hurt/app.3.change_phase_extra
 #
 # Mobの被ダメージ時の処理
 #

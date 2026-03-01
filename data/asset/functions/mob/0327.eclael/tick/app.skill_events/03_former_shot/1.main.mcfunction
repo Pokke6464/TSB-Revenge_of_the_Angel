@@ -28,7 +28,8 @@
 # 演出
     execute if score @s 93.AnimationTimer matches 8 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 0.5
     execute if score @s 93.AnimationTimer matches 22 run playsound item.crossbow.loading_start hostile @a ~ ~ ~ 1 1.3
-    execute if score @s 93.AnimationTimer matches 32..40 positioned ~ ~1.2 ~ run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/5.1.particle_line
+# 予告線表示
+    execute if score @s 93.AnimationTimer matches 32..40 positioned ~ ~1.2 ~ run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/5.2.particle_line
 # 移動方向決定
     execute if score @s 93.AnimationTimer matches 65 if predicate lib:random_pass_per/50 run tag @s add 93.Temp.MoveToRight
     execute if score @s 93.AnimationTimer matches 65 if entity @s[tag=!93.Temp.MoveToRight] run tag @s add 93.Temp.MoveToLeft
@@ -63,7 +64,8 @@
 # 演出
     execute if score @s 93.AnimationTimer matches 66 run playsound entity.phantom.flap hostile @a ~ ~ ~ 1 0.5
     execute if score @s 93.AnimationTimer matches 66 run playsound item.crossbow.loading_start hostile @a ~ ~ ~ 1 1.3
-    execute if score @s 93.AnimationTimer matches 78..91 positioned ~ ~0.9 ~ run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/5.2.particle_3way_line
+# 予告線表示
+    execute if score @s 93.AnimationTimer matches 78..91 positioned ~ ~0.9 ~ run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/5.3.particle_3way_line
 # 3way攻撃
     execute if score @s 93.AnimationTimer matches 92 at @a[tag=!PlayerShouldInvulnerable,distance=..80,sort=nearest,limit=1] run summon area_effect_cloud ~ ~1 ~ {CustomNameVisible:0b,Particle:"block air",Duration:8,Tags:["Object","93.Aec.AttackPos"]}
     execute if score @s 93.AnimationTimer matches 96 at @s run function asset:mob/0327.eclael/tick/app.skill_events/03_former_shot/4.2.attack_3way_shot

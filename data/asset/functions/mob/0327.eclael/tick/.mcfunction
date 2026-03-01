@@ -7,6 +7,9 @@
 # 対象のanimated javaモデルを紐づけ
     tag @e[type=item_display,tag=93.ModelRoot,sort=nearest,limit=1] add 93.ModelRoot.Target
 
+# 天候を取得
+    # execute if predicate lib:weather/is_thundering run tag @s add 93.Temp.IsThunder
+
 # 強化後半戦なら天候を常に雷雨にする(93.WeatherLockを使っていない理由は天鍵杖使用前に雷雨になってほしいから)
     execute unless predicate lib:weather/is_thundering if entity @s[tag=93.Phase.Latter.Extra] run weather thunder
 
@@ -27,6 +30,7 @@
     execute at @s rotated ~ 0 run tp @e[type=item_display,tag=93.ModelRoot.Target,distance=..80,sort=nearest,limit=1] ~ ~ ~ ~ ~
 # 一時タグ消去
     tag @s remove 93.Temp.Me
+    # tag @s remove 93.Temp.IsThunder
 
 # 紐づけ終了
     tag @e[type=item_display,tag=93.ModelRoot.Target] remove 93.ModelRoot.Target
