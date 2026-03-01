@@ -1,4 +1,4 @@
-#> asset:mob/0327.eclael/tick/app.skill_events/27_latter_thunderstorm/6.effect_key
+#> asset:mob/0327.eclael/tick/app.skill_events/27_latter_thunderstorm/5.effect_key
 #
 # アニメーションのイベントハンドラ 後半・雷雨
 # 天鍵杖より引用、描写距離を伸ばしたいのでforceを追加

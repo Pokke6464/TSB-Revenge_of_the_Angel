@@ -5,14 +5,11 @@
 #
 # @within function asset:mob/0327.eclael/tick/app.2.skill_event
 
-# 強化後半戦ならスキップ
-    execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 1.. run return run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/2.end
-
 # animated javaアニメーション再生 (長さ：60tick)
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/10_latter_idle/3.play_animation
     
-# ガード受け付け
-    execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
+# 難易度がHard以上ならガード受け付け
+    execute if score @s 93.AnimationTimer matches 1 if predicate api:global_vars/difficulty/min/2_hard run function asset:mob/0327.eclael/tick/app.general/11.start_guard_prepare
 
 # 表情
     execute if score @s 93.AnimationTimer matches 1 as @e[type=item_display,tag=93.ModelRoot.Target,distance=..80,sort=nearest,limit=1] run function animated_java:eclael/variants/default/apply

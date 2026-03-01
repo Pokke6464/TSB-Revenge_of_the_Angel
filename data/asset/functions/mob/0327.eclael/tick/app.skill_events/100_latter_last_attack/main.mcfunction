@@ -46,7 +46,7 @@
         execute if score @s 93.AnimationTimer matches 130 run tp @s ~ ~2 ~ ~ 0
 
 # MPを空にする霧を出す
-    # Effectを付与(MPを高速で減らす＋MP回復停止)
+    # Effectを付与(MPを高速で減らす)
         execute if score @s 93.AnimationTimer matches 90..2200 as @a[tag=!PlayerShouldInvulnerable,distance=..40] run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/aurora_mist
     # 演出
         execute if score @s 93.AnimationTimer matches 80 run playsound block.beacon.power_select player @a ~ ~ ~ 3 2
@@ -107,7 +107,7 @@
         execute if score @s 93.AnimationTimer matches 1530 positioned ~-9.5 ~ ~9.5 run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/attack_0.m {Small:"false"}
         execute if score @s 93.AnimationTimer matches 1530 positioned ~-9.5 ~ ~-9.5 run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/attack_0.m {Small:"false"}
 
-    # やけくそ雷連打
+    # やけくそ連続雷
         execute if score @s 93.AnimationTimer matches 1580 at @a[tag=!PlayerShouldInvulnerable,distance=..40] run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/attack_0.m {Small:"true"}
         execute if score @s 93.AnimationTimer matches 1600 at @a[tag=!PlayerShouldInvulnerable,distance=..40] run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/attack_0.m {Small:"true"}
         execute if score @s 93.AnimationTimer matches 1620 at @a[tag=!PlayerShouldInvulnerable,distance=..40] run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/attack_0.m {Small:"true"}
@@ -147,15 +147,6 @@
         execute if score @s 93.AnimationTimer matches 2230 run playsound entity.wither.shoot hostile @a[distance=..30] ~ ~ ~ 0.5 1.8 0.5
         execute if score @s 93.AnimationTimer matches 2230 run playsound entity.guardian.attack hostile @a ~ ~ ~ 2 1.8
         execute if score @s 93.AnimationTimer matches 2230 run particle flash ~ ~3 ~ 0 0 0 0 1
-    # 自身に被ダメージ上昇エフェクトを付与し、極光の鍵は解除
-        execute if score @s 93.AnimationTimer matches 2230 run data modify storage api: Argument.ID set value 107
-        execute if score @s 93.AnimationTimer matches 2230 run data modify storage api: Argument.Stack set value 30
-        execute if score @s 93.AnimationTimer matches 2230 run data modify storage api: Argument.Duration set value 2147483647
-        execute if score @s 93.AnimationTimer matches 2230 run function api:entity/mob/effect/give
-        execute if score @s 93.AnimationTimer matches 2230 run function api:entity/mob/effect/reset
-        execute if score @s 93.AnimationTimer matches 2230 run data modify storage api: Argument.ID set value 802
-        execute if score @s 93.AnimationTimer matches 2230 run function api:entity/mob/effect/remove/from_id
-        execute if score @s 93.AnimationTimer matches 2230 run function api:entity/mob/effect/reset
 
 # 終了
     execute if score @s 93.AnimationTimer matches 2255.. run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/end

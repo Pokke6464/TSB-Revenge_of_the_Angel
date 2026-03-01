@@ -6,6 +6,7 @@
 
 #> Private
 # @private
+    #declare score_holder $Temp
     #declare score_holder $Random
 
 # 一定間隔で実行
