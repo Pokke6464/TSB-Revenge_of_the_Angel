@@ -3,8 +3,8 @@
 # アニメーションのイベントハンドラ
 #
 # @within
-#    function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main
-#    function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main_turn
+#   function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main
+#   function asset:mob/0327.eclael/tick/app.skill_events/39_latter_upper_shot/main_turn
 
 # 演出
     playsound entity.wither.shoot hostile @a ~ ~ ~ 2 1.8

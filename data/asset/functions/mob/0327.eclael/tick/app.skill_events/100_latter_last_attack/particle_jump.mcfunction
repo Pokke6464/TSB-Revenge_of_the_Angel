@@ -1,3 +1,11 @@
+#> asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/particle_jump
+#
+# アニメーションのイベントハンドラ
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/main
+
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAGwDMArKQOwrUoC0KlALAJyueelqrABwBGWgDNWDCdUoNq1UQEMATKXxgAdsoC2CZIDDFAASiwBGMox6AzknAoA9oS0Qk1AAwEUcV3Az2YABuytiEBuAAHkheYFAxAL4JBNakaIR2iKIeObk5BDYQVm6IsXDY2GgwNgbZsRiORRAGsWg2AKIVVTXtAI6EodhQAMqWPuSIEqE1SQC6QA_3
+# 円 1
 particle end_rod ~ ~ ~ ^0 ^-100000000 ^ 0.000000006 0
 particle end_rod ~ ~ ~ ^20791169.08178 ^-97814760.07338 ^ 0.000000006 0
 particle end_rod ~ ~ ~ ^40673664.30758 ^-91354545.76426 ^ 0.000000006 0

@@ -1,1 +1,8 @@
-execute as @e[type=item_display,tag=93.ModelRoot.Target,distance=..80,sort=nearest,limit=1] run function animated_java:eclael/animations/34_field_slash/tween {duration:2, to_frame: 69}
+#> asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/animation_1
+#
+# アニメーションのイベントハンドラ
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/main
+
+# 再生
+    execute as @e[type=item_display,tag=93.ModelRoot.Target,distance=..80,sort=nearest,limit=1] run function animated_java:eclael/animations/34_field_slash/tween {duration:2, to_frame: 69}

@@ -53,3 +53,4 @@
     summon area_effect_cloud ^ ^-1 ^-1 {Duration:10,Tags:["93.Temp.AttackPosition"]}
     execute store result entity @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] Rotation[0] float 1 run random value 0..359
     execute as @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] at @s run function asset:mob/0327.eclael/tick/app.skill_events/33_latter_moveslash/attack_thunder.m {Distance:5}
+

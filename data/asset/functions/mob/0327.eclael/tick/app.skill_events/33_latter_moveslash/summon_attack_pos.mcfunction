@@ -1,3 +1,11 @@
+#> asset:mob/0327.eclael/tick/app.skill_events/33_latter_moveslash/summon_attack_pos
+#
+# アニメーションのイベントハンドラ
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/main
+
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwAsAnLQMwCGTAHALQBMA7J0+9QBm1Uu1rcUcdqQCsTGQAZu1bnFYMUYAgDsmAWwTJAYYoACTlrAwmGfQGck4FAHtC2iElYFJbuBgdgANyZsQkNwAA8kBQIoKIBfOIIbUjRCe0RKaLBbCGt3RCy4bGw0GFtDTKyMJ1yIQyy0WwBRYtLypoBHQmDsKABlK0lyREFg8oS8cGh4CnQsXAtiMgpucRlBFCF2OB4ANgEUVTEGUgAjdkFSQUpKFBRdyl3WVgtdAwpTTnZnGFiCKxsenSjhcbiQNy8cB8fkQ4CCITCYEiBRi8USYGSqXSlBkBByeSiBCKJTKFQUVRqTDqhLAjRaJPaXR6-UGcGGo2w40SU1ghlQmBw+CIJGGYCYCjUnF2nFEwlYomoD0EYiYuwY33FCgYrA2rB4Cle+j5n2+Tl+pt+FgBdn8zlc+RxkOh-nhoX8yKysQKEwxTBSaSQnCy+IwDuoRNapPB5KSlOpKNpzUjjO6xRZTCGSA5XMmkF5swFCwIS1FglYMiluxE7FOlG4lAEpGoCnYfoY+1odBQClItGE1CYtEN72MZgtUHH46t1htsNQoPyQaddRhcOCbrnHtR3vRmIDiE4uOyuVDNOJbTJFNq9QIdOTcE6qd6AwzbKzYzgCQAukA_3
+# 円 2-copy-copy-copy
 summon area_effect_cloud ^0 ^ ^-25 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^7.72542 ^ ^-23.77641 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^14.69463 ^ ^-20.22542 {Duration:200,Tags:["93.Temp.AttackPosition"]}
@@ -18,6 +26,7 @@ summon area_effect_cloud ^-23.77641 ^ ^-7.72542 {Duration:200,Tags:["93.Temp.Att
 summon area_effect_cloud ^-20.22542 ^ ^-14.69463 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-14.69463 ^ ^-20.22542 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-7.72542 ^ ^-23.77641 {Duration:200,Tags:["93.Temp.AttackPosition"]}
+# 円 2
 summon area_effect_cloud ^0 ^ ^-10 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^7.07107 ^ ^-7.07107 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^10 ^ ^0 {Duration:200,Tags:["93.Temp.AttackPosition"]}
@@ -26,6 +35,7 @@ summon area_effect_cloud ^0 ^ ^10 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-7.07107 ^ ^7.07107 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-10 ^ ^0 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-7.07107 ^ ^-7.07107 {Duration:200,Tags:["93.Temp.AttackPosition"]}
+# 円 2-copy
 summon area_effect_cloud ^0 ^ ^-15 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^8.10961 ^ ^-12.6188 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^13.64448 ^ ^-6.23123 {Duration:200,Tags:["93.Temp.AttackPosition"]}
@@ -37,6 +47,7 @@ summon area_effect_cloud ^-11.33624 ^ ^9.82291 {Duration:200,Tags:["93.Temp.Atta
 summon area_effect_cloud ^-14.84732 ^ ^2.13472 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-13.64448 ^ ^-6.23123 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^-8.10961 ^ ^-12.6188 {Duration:200,Tags:["93.Temp.AttackPosition"]}
+# 円 2-copy-copy
 summon area_effect_cloud ^4.83844 ^ ^-19.40591 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^12.31323 ^ ^-15.76022 {Duration:200,Tags:["93.Temp.AttackPosition"]}
 summon area_effect_cloud ^17.65895 ^ ^-9.38943 {Duration:200,Tags:["93.Temp.AttackPosition"]}

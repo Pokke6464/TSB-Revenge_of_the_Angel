@@ -1,3 +1,11 @@
+#> asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/5.4.particle_slash_2
+#
+# アニメーションのイベントハンドラ 後半・回転斬り
+#
+# @within function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/**
+
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwDMALAOwAcArLZQLS1sCGnADACMAZuwCcKAfXZCUlcaW4DacIQLAEAdtwC2CZIDDFAASN1YGNww6AzknAoA9oQ0QktZgRRxncDLbAA3bmxCPXAADyQ+AihIgF9YgktSNEIbREoAJgIrCAsXRCiwOGxsNBgrPUo+Qox7XIg9QrQrAFESsoqWgEdCIOwoAGVzT3JEISCK+IBdIA_3
+# 円 8
 particle dust 1 100000000 1 3 ^0 ^ ^-12 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^1.67008 ^ ^-11.88322 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^3.30765 ^ ^-11.53514 0.1 0.1 0.1 0 2
@@ -43,6 +51,8 @@ particle dust 1 100000000 1 3 ^-6.35903 ^ ^-10.17658 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-4.88084 ^ ^-10.96255 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-3.30765 ^ ^-11.53514 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-1.67008 ^ ^-11.88322 0.1 0.1 0.1 0 2
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwDMALAOwAcArLZQLS1sCGnADACMAZuwCcKAfXZCUlcaW4DacIQLAEAdtwC2CZIDDFAASN1YGNww6AzknAoA9oQ0QktZgRRxncDLbAA3bmxCPXAADyQ+AihIgF9YgktSNEIbREpKADpqAisICxdEKLA4bGw0GCs9Sj5ijHt8iD1itCsAUTKKqraAR0Ig7CgAZXNPckQhIKr4gF0gA_3
+# 円 8
 particle dust 1 100000000 1 3 ^0 ^ ^-11.3 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^1.57266 ^ ^-11.19003 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^3.1147 ^ ^-10.86226 0.1 0.1 0.1 0 2
@@ -88,6 +98,8 @@ particle dust 1 100000000 1 3 ^-5.98809 ^ ^-9.58294 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-4.59612 ^ ^-10.32306 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-3.1147 ^ ^-10.86226 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^-1.57266 ^ ^-11.19003 0.1 0.1 0.1 0 2
+# [ImportKey]: NobwRALgngDgpmAXGAxgSwE4oDYIDRgCuhaAJkmAIwDMALAOwAcArLZQLS1sCGnADACMAZuwCcKAfXZCUlcaW4DacIQLAEAdtwC2CZIDDFAASN1YGNww6AzknAoA9oQ0QktZgRRxncDLbAA3bmxCPXAADyQ+AihIgF9YgktSNEIbREo+ADoANgIrCAsXRCiwOGxsNBgrPQySjHsCiD0StCsAUXLK6raAR0Ig7CgAZXNPckQhIOr4gF0gA_3
+# 円 8
 particle dust 1 100000000 1 3 ^0 ^ ^-10.6 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^1.47523 ^ ^-10.49684 0.1 0.1 0.1 0 2
 particle dust 1 100000000 1 3 ^2.92176 ^ ^-10.18937 0.1 0.1 0.1 0 2
