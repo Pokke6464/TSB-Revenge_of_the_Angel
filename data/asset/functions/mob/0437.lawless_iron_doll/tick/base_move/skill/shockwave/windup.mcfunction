@@ -15,4 +15,4 @@
 
 # タイプ切り替え
     execute if entity @s[tag=C5.Skill.ShockWave.BigType] run return run tag @s remove C5.Skill.ShockWave.BigType
-    tag @s add C5.Skill.ShockWave.BigType
+    tag @s[scores={C5.Phase=2..}] add C5.Skill.ShockWave.BigType
