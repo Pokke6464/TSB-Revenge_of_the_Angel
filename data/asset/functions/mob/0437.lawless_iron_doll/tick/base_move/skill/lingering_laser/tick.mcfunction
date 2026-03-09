@@ -11,9 +11,11 @@
     # ノーマルなど
         execute if score @s General.Mob.Tick matches 0..30 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-10 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
     # ハード
-        execute if predicate api:global_vars/difficulty/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 0..80 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-10 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
+        execute if predicate api:global_vars/difficulty/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 0..65 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-10 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
     # Blessless
-        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 0..90 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-10 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s[tag=!C5.Skill.LingeringLaser.MistType,scores={C5.Phase=2..}] General.Mob.Tick matches 0..85 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-10 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
+    # Blesslessのミストタイプ
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s[tag=C5.Skill.LingeringLaser.MistType,scores={C5.Phase=2..}] General.Mob.Tick matches 0..85 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-5 facing entity @s feet positioned as @s rotated ~ ~ run tp @s ~ ~ ~ ~ ~
 
 # 後半戦でミストタイプじゃなければ2way予告線を表示
     execute if score @s[tag=!C5.Skill.LingeringLaser.MistType,scores={C5.Phase=2..}] General.Mob.Tick matches 0..30 positioned ~ ~1.5 ~ positioned ^ ^ ^2 rotated ~25 3 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/line_particle
@@ -40,8 +42,8 @@
     # 発射前のアニメーションで暫く止めておく
         execute if predicate api:global_vars/difficulty/min/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 40 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_ranged_1_windup/tween {to_frame: 20, duration: 4}
     # 予告線
-        execute if predicate api:global_vars/difficulty/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 40..70 positioned ~ ~1.5 ~ positioned ^ ^ ^2 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/line_particle
-        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 40..90 positioned ~ ~1.5 ~ positioned ^ ^ ^2 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/line_particle
+        execute if predicate api:global_vars/difficulty/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 40..65 positioned ~ ~1.5 ~ positioned ^ ^ ^2 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/line_particle
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 40..85 positioned ~ ~1.5 ~ positioned ^ ^ ^2 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/lingering_laser/line_particle
 
     # ハード以降、第二形態で一発
         execute if predicate api:global_vars/difficulty/min/2_hard if score @s[scores={C5.Phase=2..}] General.Mob.Tick matches 62 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_ranged_1_activate/tween {to_frame: 0, duration: 1}

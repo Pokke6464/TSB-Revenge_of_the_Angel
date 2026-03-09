@@ -26,8 +26,8 @@
 # 巨大タイプの演出
     execute if score @s[tag=C5.Skill.ShockWave.BigType] General.Mob.Tick matches 0..35 run particle trial_spawner_detection ~ ~1.5 ~ 1 1.25 1 0 2 force @a[distance=..32]
     execute if score @s General.Mob.Tick matches 35 run particle firework ~ ~2 ~ 0.5 0.5 0.5 0.5 40 force @a[distance=..32]
-    execute if score @s General.Mob.Tick matches 35 run playsound item.trident.return hostile @a ~ ~ ~ 2 0.75
-    execute if score @s General.Mob.Tick matches 35 run playsound item.trident.return hostile @a ~ ~ ~ 2 1.0
+    execute if score @s General.Mob.Tick matches 35 run playsound ogg:item.trident.return1 hostile @a ~ ~ ~ 2 0.75
+    execute if score @s General.Mob.Tick matches 35 run playsound ogg:item.trident.return1 hostile @a ~ ~ ~ 2 1.0
 
 # 攻撃の発動よりちょっと前にアニメ再生
     execute if score @s General.Mob.Tick matches 42 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_3_activate/tween {to_frame: 0, duration: 1}
