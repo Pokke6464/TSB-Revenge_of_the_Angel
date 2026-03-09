@@ -9,8 +9,8 @@
 # animated javaアニメーション再生 (長さ：80tick)
     execute if score @s 93.AnimationTimer matches 1 run function asset:mob/0327.eclael/tick/app.skill_events/06_former_shortmagic/3_0.play_magic_animation
 # 演出
-    execute if score @s 93.AnimationTimer matches 14 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
-    execute if score @s 93.AnimationTimer matches 45 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
+    execute if score @s 93.AnimationTimer matches 14 run playsound disabled_sounds:item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
+    execute if score @s 93.AnimationTimer matches 45 run playsound disabled_sounds:item.armor.equip_leather hostile @a ~ ~ ~ 1 0.7
     execute if score @s 93.AnimationTimer matches 55 at @e[type=area_effect_cloud,tag=93.Aec.AttackPos,distance=..80,sort=nearest,limit=1] run playsound entity.lightning_bolt.impact hostile @a ~ ~ ~ 1 1
 # チェインタイプならここから先は別のfunctionで処理する
     execute if entity @s[tag=93.Skill.Former.ShortMagic.ChainType] run return run function asset:mob/0327.eclael/tick/app.skill_events/06_former_shortmagic/chain_type/main

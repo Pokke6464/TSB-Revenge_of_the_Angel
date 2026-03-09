@@ -26,7 +26,7 @@
         # 強化後半戦の追撃
             execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 22 as @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] at @s run function asset:mob/0327.eclael/tick/app.skill_events/38_latter_circle_slash/attack_thunder
     # 演出
-        execute if score @s 93.AnimationTimer matches 9 run playsound item.armor.equip_iron hostile @a ~ ~ ~ 2 1
+        execute if score @s 93.AnimationTimer matches 9 run playsound disabled_sounds:item.armor.equip_iron hostile @a ~ ~ ~ 2 1
         execute if score @s 93.AnimationTimer matches 27 run playsound entity.wither.shoot hostile @a[distance=..30] ~ ~ ~ 0.5 1.8 0.5
         execute if score @s 93.AnimationTimer matches 27 run playsound entity.guardian.attack hostile @a ~ ~ ~ 2 1.8
         execute if score @s 93.AnimationTimer matches 27 run particle flash ~ ~1 ~ 0 0 0 0 1

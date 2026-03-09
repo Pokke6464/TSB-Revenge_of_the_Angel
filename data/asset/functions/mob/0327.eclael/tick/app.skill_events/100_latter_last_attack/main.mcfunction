@@ -20,7 +20,7 @@
     execute if score @s 93.AnimationTimer matches 34 run function asset:mob/0327.eclael/tick/app.skill_events/100_latter_last_attack/animation_0
     # 演出
         # 剣を掲げる時の音
-            execute if score @s 93.AnimationTimer matches 38 run playsound item.armor.equip_iron hostile @a ~ ~ ~ 2 1
+            execute if score @s 93.AnimationTimer matches 38 run playsound disabled_sounds:item.armor.equip_iron hostile @a ~ ~ ~ 2 1
             execute if score @s 93.AnimationTimer matches 48 run playsound entity.illusioner.prepare_mirror hostile @a ~ ~ ~ 3 0.75
             execute if score @s 93.AnimationTimer matches 48 run playsound entity.illusioner.prepare_mirror hostile @a ~ ~ ~ 3 0.85
             execute if score @s 93.AnimationTimer matches 48 run playsound entity.illusioner.prepare_mirror hostile @a ~ ~ ~ 3 0.95

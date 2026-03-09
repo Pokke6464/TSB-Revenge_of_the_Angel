@@ -26,7 +26,7 @@
         execute if score @s 93.AnimationTimer matches 6 run playsound entity.wither.shoot hostile @a[distance=..30] ~ ~ ~ 0.5 1.8 0.5
         execute if score @s 93.AnimationTimer matches 6 run playsound entity.guardian.attack hostile @a ~ ~ ~ 2 1.8
         execute if score @s 93.AnimationTimer matches 6 run particle flash ^ ^1 ^5 0 0 0 0 1
-        execute if score @s 93.AnimationTimer matches 19 run playsound item.armor.equip_iron hostile @a ~ ~ ~ 2 1
+        execute if score @s 93.AnimationTimer matches 19 run playsound disabled_sounds:item.armor.equip_iron hostile @a ~ ~ ~ 2 1
         execute if score @s 93.AnimationTimer matches 1 positioned ^ ^1 ^-3 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/particle_jump
         execute if score @s 93.AnimationTimer matches 6 positioned ^ ^1 ^5 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/particle_jump
         execute if entity @s[tag=93.Skill.Beam.ReflectType] if score @s 93.AnimationTimer matches 10..115 run particle dust 1 -0.01 1 1.5 ~ ~1 ~ 0.8 1 0.8 1 2 force
@@ -43,8 +43,8 @@
     execute if score @s 93.AnimationTimer matches 131 positioned ^ ^ ^6 run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_4
     # 演出
         execute if entity @s[tag=93.Skill.Beam.ReflectType] if score @s 93.AnimationTimer matches 61 run playsound entity.experience_orb.pickup hostile @a ~ ~ ~ 3 1.8
-        execute if score @s 93.AnimationTimer matches 157 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 2 1
-        execute if score @s 93.AnimationTimer matches 177 run playsound item.armor.equip_leather hostile @a ~ ~ ~ 2 1
+        execute if score @s 93.AnimationTimer matches 157 run playsound disabled_sounds:item.armor.equip_leather hostile @a ~ ~ ~ 2 1
+        execute if score @s 93.AnimationTimer matches 177 run playsound disabled_sounds:item.armor.equip_leather hostile @a ~ ~ ~ 2 1
     # 移動
         execute if score @s 93.AnimationTimer matches 177..186 at @s run tp @s ^ ^0.03 ^ ~ 0
 
