@@ -26,7 +26,7 @@
 # 地面と重なっても爆発する
     execute unless block ~ ~ ~ #lib:no_collision run function asset:object/2242.lawless_chaser_shot/tick/explode
 
-# Tickが300を超えていれば確率で起爆準備に入る
+# Tickが300以上なら確率で起爆準備に入る
     execute if score @s General.Object.Tick matches 300..499 if predicate lib:random_pass_per/3 run scoreboard players set @s General.Object.Tick 500
 
 # 爆発の予告
