@@ -32,19 +32,24 @@
 # ブレーキのTick処理
     execute if score @s General.Mob.Tick matches 30..45 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/breaking_tick
 
-# 最寄りのプレイヤーへ素早く向き直る
-    execute if score @s General.Mob.Tick matches 37..44 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-150 rotated as @s positioned ^ ^ ^-200 facing entity @s feet positioned as @s run tp @s ~ ~ ~ ~ ~
+# 最寄りのプレイヤーへそこそこの速度で向き直る。横移動でも避けられる
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 35..52 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-2 facing entity @s feet positioned as @s run tp @s ~ ~ ~ ~ ~
+    # Blesslessでは素早く向き直る。回避にはジャンプが必須レベル
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 35..40 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-1 facing entity @s feet positioned as @s run tp @s ~ ~ ~ ~ ~
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 41..49 facing entity @p[gamemode=!spectator,distance=..256] feet positioned ^ ^ ^-1 rotated as @s positioned ^ ^ ^-0.5 facing entity @s feet positioned as @s run tp @s ~ ~ ~ ~ ~
 
 # 追撃準備アニメ
-    execute if score @s General.Mob.Tick matches 37 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_3_windup/tween {to_frame: 4, duration:4}
+    execute if score @s General.Mob.Tick matches 30 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_1_windup/tween {to_frame: 4, duration: 4}
 
 # 追撃
-    execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/max/2_hard as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_3_activate/tween {to_frame: 0, duration:1}
-    execute if score @s General.Mob.Tick matches 54 if predicate api:global_vars/difficulty/max/2_hard run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/slash
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 50 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_1_activate/tween {to_frame: 0, duration:1}
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 54 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/position_adjustment
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 54 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/follow-up_attack
     # Blesslessなら追撃速度上昇
-        execute if score @s General.Mob.Tick matches 45 if predicate api:global_vars/difficulty/min/3_blessless as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_3_activate/tween {to_frame: 0, duration:1}
-        execute if score @s General.Mob.Tick matches 49 if predicate api:global_vars/difficulty/min/3_blessless run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/slash
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 45 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_1_activate/tween {to_frame: 0, duration:1}
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 49 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/position_adjustment
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 49 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/follow-up_attack
 
 # リセット
-    execute if score @s General.Mob.Tick matches 80.. if predicate api:global_vars/difficulty/min/3_blessless run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset
-    execute if score @s General.Mob.Tick matches 85.. if predicate api:global_vars/difficulty/max/2_hard run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset
+    execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 80.. run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 85.. run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset

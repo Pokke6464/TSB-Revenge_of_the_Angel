@@ -32,9 +32,9 @@
     execute if score @s General.Mob.Tick matches 42 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/attack
 
 # 後半戦ではHardなら+1回、Blesslessなら+2回連続攻撃
-    execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/max/2_hard if entity @s[tag=C5.LoopCount.1,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
-    execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=C5.LoopCount.2,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
-    execute if score @s General.Mob.Tick matches 50 if predicate api:global_vars/difficulty/min/2_hard if entity @s[scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 50 if entity @s[tag=C5.LoopCount.1,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
+    execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 50 if entity @s[tag=C5.LoopCount.2,scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run scoreboard players set @s General.Mob.Tick 51
+    execute if predicate api:global_vars/difficulty/min/2_hard if score @s General.Mob.Tick matches 50 if entity @s[scores={C5.Phase=2..}] unless data storage rota: {RuthlessMode:1b} run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
     # 自重消失モードなら75%を引き続ける限りループする
         execute if score @s General.Mob.Tick matches 50 if entity @s[scores={C5.Phase=2..}] if data storage rota: {RuthlessMode:1b} if predicate lib:random_pass_per/75 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/loop
 
