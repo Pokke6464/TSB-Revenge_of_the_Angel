@@ -1,4 +1,4 @@
-#> asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/follow-up_attack
+#> asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/thrust
 #
 # 追撃
 #

@@ -44,11 +44,11 @@
 # 追撃
     execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 50 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_1_activate/tween {to_frame: 0, duration:1}
     execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 54 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/position_adjustment
-    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 54 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/follow-up_attack
+    execute if predicate api:global_vars/difficulty/max/2_hard if score @s General.Mob.Tick matches 54 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/thrust
     # Blesslessなら追撃速度上昇
         execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 45 as @e[type=item_display,tag=C5.ModelRoot.Target,sort=nearest,limit=1] run function animated_java:lawless_iron_doll/animations/attack_melee_1_activate/tween {to_frame: 0, duration:1}
         execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 49 at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/position_adjustment
-        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 49 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/follow-up_attack
+        execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 49 at @s rotated ~ 0 run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/thrust
 
 # リセット
     execute if predicate api:global_vars/difficulty/min/3_blessless if score @s General.Mob.Tick matches 80.. run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/reset
