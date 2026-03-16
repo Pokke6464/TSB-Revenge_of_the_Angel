@@ -5,9 +5,9 @@
 # @within function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/charge/thrust
 
 # 先端
-    particle firework ^ ^ ^5.5 0 0 0 0.5 10 force @a[distance=..32]
-    particle firework ^ ^ ^5.5 0 0 0 0.2 10 force @a[distance=..32]
-    particle flash ^ ^ ^5.5 0 0 0 0 1 force @a[distance=..32]
+    particle firework ^ ^ ^5.75 0 0 0 0.5 10 force @a[distance=..32]
+    particle firework ^ ^ ^5.75 0 0 0 0.2 10 force @a[distance=..32]
+    particle flash ^ ^ ^5.75 0 0 0 0 1 force @a[distance=..32]
     particle dust 0.75 0.75 0.75 2.5 ^ ^ ^7 0 0 0 0 1 force @a[distance=..32]
     particle dust 0.75 0.75 0.75 2.5 ^0.25 ^ ^6.5 0 0 0 0 1 force @a[distance=..32]
     particle dust 0.75 0.75 0.75 2.5 ^-0.25 ^ ^6.5 0 0 0 0 1 force @a[distance=..32]

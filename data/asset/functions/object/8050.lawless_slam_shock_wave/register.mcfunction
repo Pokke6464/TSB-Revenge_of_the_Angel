@@ -18,4 +18,3 @@
     data modify storage asset:object ID set value 8050
 # フィールド(オプション)
         data modify storage asset:object Field.Color set value 12899545
-        data modify storage asset:object Field.Tick set value 60
