@@ -10,8 +10,8 @@
     execute facing entity @p[gamemode=!spectator,distance=..256] feet run tp @s ~ ~ ~ ~ ~
 
 # 落下地点となるマーカーを置く
-    execute rotated as @s[tag=!C5.JumpFar] rotated ~ 0 positioned ^ ^ ^5 align y run summon marker ~ ~ ~ {Tags:["C5.Marker","C5.Marker.SlamPoint"]}
-    execute rotated as @s[tag=C5.JumpFar] rotated ~ 0 positioned ^ ^ ^10 align y run summon marker ~ ~ ~ {Tags:["C5.Marker","C5.Marker.SlamPoint"]}
+    execute if entity @s[tag=!C5.JumpFar] rotated as @s rotated ~ 0 positioned ^ ^ ^5 align y run summon marker ~ ~ ~ {Tags:["C5.Marker","C5.Marker.SlamPoint"]}
+    execute if entity @s[tag=C5.JumpFar] rotated as @s rotated ~ 0 positioned ^ ^ ^10 align y run summon marker ~ ~ ~ {Tags:["C5.Marker","C5.Marker.SlamPoint"]}
 
 # マーカーの位置を調整する
     execute as @e[type=marker,tag=C5.Marker.SlamPoint,distance=..256,limit=1] at @s run function asset:mob/0437.lawless_iron_doll/tick/base_move/skill/slam/slam_point_adjustments
