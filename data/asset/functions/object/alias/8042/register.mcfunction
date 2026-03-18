@@ -5,4 +5,4 @@
 # @within asset_manager:object/summon/register.m
 
 # 元の登録処理を呼び出す
-    function asset:object/8042.hetukedah_shock_wave/register
+    function asset:object/8042.hetukedah_ring_shockwave/register

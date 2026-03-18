@@ -5,4 +5,4 @@
 # @within asset_manager:object/call_method/run_method.m
 
 # 本来の処理を呼び出す
-    function asset:object/8030.shock_wave/attack/
+    function asset:object/8030.ring_shockwave/attack/

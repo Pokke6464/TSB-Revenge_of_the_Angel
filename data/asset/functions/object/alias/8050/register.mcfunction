@@ -5,4 +5,4 @@
 # @within asset_manager:object/summon/register.m
 
 # 元の登録処理を呼び出す
-    function asset:object/8050.lawless_slam_shock_wave/register
+    function asset:object/8050.lawless_ring_shockwave/register

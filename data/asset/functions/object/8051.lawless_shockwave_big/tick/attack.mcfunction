@@ -2,7 +2,9 @@
 #
 #
 #
-# @within function asset:object/8051.lawless_shockwave_big/tick/explosion
+# @within function 
+#   asset:object/8051.lawless_shockwave_big/tick/explosion
+#   asset:object/8051.lawless_shockwave_big/tick/end
 
 # 引数の設定
     # 与えるダメージ
