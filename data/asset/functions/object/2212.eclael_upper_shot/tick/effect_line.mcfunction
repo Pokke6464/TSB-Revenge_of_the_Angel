@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:object/2212.eclael_upper_shot/tick/
-#   asset:object/8002.eclael_upper_shot/tick/
+#   asset:object/8003.eclael_upper_shot_slow/tick/
 
 # 演出
     scoreboard players add @s 2212.EffectTimer 1

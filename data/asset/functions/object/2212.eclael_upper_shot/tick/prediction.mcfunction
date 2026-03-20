@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:object/2212.eclael_upper_shot/tick/
-#   asset:object/8002.eclael_upper_shot/tick/
+#   asset:object/8003.eclael_upper_shot_slow/tick/
 
 # 予告
     data modify storage api: Argument.ID set value 2113

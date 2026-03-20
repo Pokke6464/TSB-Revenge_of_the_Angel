@@ -4,7 +4,7 @@
 #
 # @within function
 #   asset:object/2212.eclael_upper_shot/tick/
-#   asset:object/8002.eclael_upper_shot/tick/
+#   asset:object/8003.eclael_upper_shot_slow/tick/
 
 # 計算
     scoreboard players operation $Interval Temporary = @s General.Object.Tick
