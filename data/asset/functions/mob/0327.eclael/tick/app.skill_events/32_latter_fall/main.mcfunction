@@ -28,9 +28,9 @@
     # 攻撃
         execute if score @s 93.AnimationTimer matches 39 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_fall
     # 衝撃波
-        execute if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:7929849,Speed:1,Tick:60,HitboxDelay:0}
-        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:7929763,Speed:0.5,Tick:75,HitboxDelay:0}
-        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:9865468,Speed:2,Tick:30,HitboxDelay:0}
+        execute if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:7929849,Speed:1,Tick:60,HitboxDelay:1}
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:7929763,Speed:0.5,Tick:75,HitboxDelay:1}
+        execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 69 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_shock_wave {Color:9865468,Speed:2,Tick:30,HitboxDelay:1}
     # 演出
         execute if score @s 93.AnimationTimer matches 69 run particle end_rod ~ ~6 ~ 0.3 10 0.3 0.1 50
         execute if score @s 93.AnimationTimer matches 67 positioned ~ ~18 ~ run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/particle_jump
