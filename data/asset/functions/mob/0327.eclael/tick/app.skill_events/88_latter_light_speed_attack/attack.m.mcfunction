@@ -10,7 +10,7 @@
     data modify storage api: Argument.FieldOverride.Rotation set from entity @s Rotation
     execute store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
     data modify storage api: Argument.FieldOverride.Damage set from storage asset:context this.Damage.LightSpeedAttack
-    execute positioned ^ ^ ^-45 run function api:object/summon
+    execute positioned ^ ^ ^-40 run function api:object/summon
 
 # 方向を変える
     $execute at @s run tp @s ~ ~ ~ ~$(RotY) ~

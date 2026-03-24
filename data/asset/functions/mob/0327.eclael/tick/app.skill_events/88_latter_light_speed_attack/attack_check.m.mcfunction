@@ -31,9 +31,7 @@
     # 3.桃色 / 少しだけずれた自機狙い。次の攻撃の角度を大きくずらす
         execute if score $Random Temporary matches 3 positioned ^1 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:16750335,RotY:150}
     # 4~6.青色 / ジャンプしないと当たらない高さに攻撃。それ以外はずれる方向や角度が反対な以外は桃色と同じ
-        execute if score $Random Temporary matches 4 positioned ^-1 ^2 ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:4474111,RotY:210}
-        execute if score $Random Temporary matches 5 positioned ^-1 ^2 ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:4474111,RotY:210}
-        execute if score $Random Temporary matches 6 positioned ^-1 ^2 ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:4474111,RotY:210}
+        execute if score $Random Temporary matches 4..6 positioned ^-1 ^2 ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:4474111,RotY:210}
 
 # リセット
     scoreboard players reset $Random Temporary

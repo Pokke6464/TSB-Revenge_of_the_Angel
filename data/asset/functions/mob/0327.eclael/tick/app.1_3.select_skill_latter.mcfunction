@@ -4,11 +4,13 @@
 #
 # @within function asset:mob/0327.eclael/tick/app.1_1.select_skill
 
+# デバッグ用
+    # return run tag @s add 93.Skill.LightSpeedAttack
+
 # カウント増加
     scoreboard players add @s 93.ActionCount 1
 
 # カウントリセット
-    #execute unless score @s 93.ActionCount matches 10 run scoreboard players set @s 93.ActionCount 10
     execute if score @s 93.ActionCount matches 59..99 run scoreboard players set @s 93.ActionCount 1
     execute if score @s 93.ActionCount matches 111.. run scoreboard players set @s 93.ActionCount 6
 

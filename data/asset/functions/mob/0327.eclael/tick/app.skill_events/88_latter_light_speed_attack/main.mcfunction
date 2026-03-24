@@ -50,11 +50,14 @@
     # 移動
         execute if score @s 93.AnimationTimer matches 89 run tp @s ~ ~2 ~ ~180 0
 
+# 自重消失モードなら最初から最高速
+    execute if score @s 93.AnimationTimer matches 90..280 if data storage rota: {RuthlessMode:1b} positioned as @p[tag=93.Temp.Target,distance=..80] run return run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack_check.m {Interval:1}
+
 # 攻撃 / 角度をずらしながら往復する
-    execute if score @s 93.AnimationTimer matches 90 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^ ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:11206655,RotY:190}
-    execute if score @s 93.AnimationTimer matches 95 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^1.5 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:11861940,RotY:190}
-    execute if score @s 93.AnimationTimer matches 100 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^1.5 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:10055935,RotY:190}
-    execute if score @s 93.AnimationTimer matches 105 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^0.5 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:16750335,RotY:190}
+    execute if score @s 93.AnimationTimer matches 90 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^ ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:11206655,RotY:200}
+    execute if score @s 93.AnimationTimer matches 95 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^6 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:11861940,RotY:160}
+    execute if score @s 93.AnimationTimer matches 100 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^6 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:10055935,RotY:200}
+    execute if score @s 93.AnimationTimer matches 105 positioned as @p[tag=93.Temp.Target,distance=..80] positioned ^1 ^ ^ run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack.m {Color:16750335,RotY:200}
     execute if score @s 93.AnimationTimer matches 115..240 if predicate api:global_vars/difficulty/max/2_hard positioned as @p[tag=93.Temp.Target,distance=..80] run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack_check.m {Interval:4}
     execute if score @s 93.AnimationTimer matches 115..240 if predicate api:global_vars/difficulty/min/3_blessless positioned as @p[tag=93.Temp.Target,distance=..80] run function asset:mob/0327.eclael/tick/app.skill_events/88_latter_light_speed_attack/attack_check.m {Interval:3}
     # 最後に加速する
