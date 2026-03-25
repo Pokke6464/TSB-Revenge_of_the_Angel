@@ -22,8 +22,7 @@
     data modify storage api: Argument.BypassArmorDefense set value true
     data modify storage api: Argument.BypassArmorToughness set value true
     data modify storage api: Argument.ApplyTrigger set value false
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは全ての血がオーロラに置き換わった","with":[{"selector":"@s"}]}]'
-    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは紅いオーロラによって力尽きた","with":[{"selector":"@s"}]}]'
+    data modify storage api: Argument.DeathMessage append value '[{"translate": "%1$sは紅いオーロラに全身を侵蝕された","with":[{"selector":"@s"}]}]'
     function api:damage/
     function api:damage/reset
 
