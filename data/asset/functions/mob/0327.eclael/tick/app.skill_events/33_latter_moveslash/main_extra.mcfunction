@@ -11,16 +11,7 @@
 
 # 瞬間移動で距離を取る
     execute if score @s 93.AnimationTimer matches 3 facing entity @p[tag=!PlayerShouldInvulnerable,distance=..80] feet run tp @s ~ ~ ~ ~ 0
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
-    execute if score @s 93.AnimationTimer matches 3 at @s positioned ^ ^ ^-1 run function asset:mob/0327.eclael/tick/app.general/2.teleport
+    execute if score @s 93.AnimationTimer matches 3 at @s run function asset:mob/0327.eclael/tick/app.skill_events/33_latter_moveslash/teleport_backward
 
 # 演出
     execute if score @s 93.AnimationTimer matches 1 run playsound entity.wither.shoot hostile @a[distance=..30] ~ ~ ~ 0.5 1.8 0.5
