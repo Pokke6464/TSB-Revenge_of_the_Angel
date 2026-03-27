@@ -22,7 +22,7 @@
         execute if score $Random Temporary matches 1 as @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] at @s run tp @s ^-7 ^ ^-20
         scoreboard players reset $Random Temporary
 
-# 既に同じ場所に攻撃予告があるなら攻撃キャンセル(これが無いと無被弾難易度が格段に上がる)
+# 既に同じ場所に攻撃予告があるなら攻撃キャンセル(これが無いと回避難易度が格段に上がる)
     execute as @e[type=area_effect_cloud,tag=93.Temp.AttackPosition,distance=..80,sort=nearest,limit=1] at @s if entity @e[type=armor_stand,scores={ObjectID=8005},distance=..1,limit=1] run return run kill @s
 
 # 攻撃
