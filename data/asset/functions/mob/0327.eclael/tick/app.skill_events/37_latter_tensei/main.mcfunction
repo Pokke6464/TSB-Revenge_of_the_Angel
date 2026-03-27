@@ -21,6 +21,8 @@
     # プレイヤーの方を向く
         execute if score @s 93.AnimationTimer matches 15..33 run tag @s add 93.Temp.Me
         execute if score @s 93.AnimationTimer matches 15..33 as @a[tag=!PlayerShouldInvulnerable,distance=..40,sort=furthest,limit=1] run function asset:mob/0327.eclael/tick/app.general/1.rotate
+    # 攻撃範囲表示
+        execute if score @s 93.AnimationTimer matches 33 at @s positioned ^ ^-0.45 ^9.6 run function asset:mob/0327.eclael/tick/app.skill_events/37_latter_tensei/prediction
     # 移動
         # 飛び上がる / 強化後半戦では更に高く飛ぶ
             execute unless entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] if score @s 93.AnimationTimer matches 34..50 at @s run tp @s ^ ^0.25 ^0.45
