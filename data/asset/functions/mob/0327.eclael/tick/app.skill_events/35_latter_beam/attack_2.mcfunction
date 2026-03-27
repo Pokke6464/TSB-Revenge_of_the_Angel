@@ -44,10 +44,11 @@
     execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] rotated ~50 ~ positioned ^ ^ ^9 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack.m {Delay:0,Silent:"false"}
     execute if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] rotated ~-50 ~ positioned ^ ^ ^9 run function asset:mob/0327.eclael/tick/app.general/16.thunderstorm_attack.m {Delay:0,Silent:"false"}
 
-# 弾召喚 / 強化後半戦では低速の斬撃が増える
+# 弾召喚
     execute unless entity @s[tag=93.Skill.Beam.ReflectType] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:2190,Damage:"0",Angle:-0.3f,SlowSpeed:"false"}
-    execute unless entity @s[tag=93.Skill.Beam.ReflectType] if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:2190,Damage:"0",Angle:-0.3f,SlowSpeed:"true"}
     execute if entity @s[tag=93.Skill.Beam.ReflectType] run return run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:8002,Damage:"1",Angle:-0.3f,SlowSpeed:"false"}
+    # 通常タイプでは、強化後半戦かつ自重消失モードなら低速の斬撃が増える
+        execute unless entity @s[tag=93.Skill.Beam.ReflectType] if data storage rota: {RuthlessMode:1b} if entity @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_beam.m {ID:2190,Damage:"0",Angle:-0.3f,SlowSpeed:"true"}
 
 # ライン斬撃
     execute if predicate api:global_vars/difficulty/2_hard run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/attack_line_slash.m {Rotation:60,PosX:0,PosY:0,PosZ:3,IsGreen:"true"}

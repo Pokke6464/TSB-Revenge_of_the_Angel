@@ -11,7 +11,7 @@
 # 名前 (TextComponentString)
     data modify storage asset:effect Name set value '[{"text":"極","color":"#00ffe2"},{"text":"光","color":"#00e2e9"},{"text":"の","color":"#00c5f0"},{"text":"鍵","color":"#008bff"}]'
 # 説明文 (TextComponentString[])
-    data modify storage asset:effect Description set value ['{"text":"雷属性魔力が大きく上昇し、"}','{"text":"あらゆる攻撃に落雷による追撃が発生する。"}','{"text":"ただし、魔力が枯渇するとこのバフが解除される。"}']
+    data modify storage asset:effect Description set value ['{"text":"雷属性魔力が大きく上昇するほか、"}','{"text":"あらゆる攻撃に落雷による追撃が発生するようになる。"}']
 # 効果時間 (int) (default = API || error)
     data modify storage asset:effect Duration set value 2147483647
 # スタック (int) (default = API || 1)

@@ -52,4 +52,5 @@
     tag @a remove 93.Temp.Target
 
 # 終了
-    execute if score @s 93.AnimationTimer matches 190.. run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/end
+    execute if score @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] 93.AnimationTimer matches 190.. run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/end
+    execute if score @s 93.AnimationTimer matches 200.. run function asset:mob/0327.eclael/tick/app.skill_events/35_latter_beam/end
