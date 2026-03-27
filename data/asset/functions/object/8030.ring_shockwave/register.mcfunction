@@ -19,7 +19,7 @@
         data modify storage asset:object Field.Color set value 16777215
     # 衝撃波が広がる速度。低すぎると広がり始めの当たり判定の甘さが目立ち、高すぎると当たらない場合があるため0.5~2を推奨。
         data modify storage asset:object Field.Speed set value 1
-    # 何Tick後に消滅するか。大きく広がるほど衝撃波が太くなって当たり判定が分かりにくくなるため程々に。
+    # 何Tick後に消滅するか。大きく広がるほど衝撃波が太くなり当たり判定が分かりにくくなるため程々に。
         data modify storage asset:object Field.Tick set value 60
     # 何Tick後から当たり判定を出すか。円形範囲攻撃+衝撃波のような場合に多段ヒットしないようにできる。
         data modify storage asset:object Field.HitboxDelay set value 0

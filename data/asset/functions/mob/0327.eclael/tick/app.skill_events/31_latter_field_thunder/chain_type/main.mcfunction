@@ -9,9 +9,9 @@
     function asset:mob/0327.eclael/tick/app.general/update_target
 
 # 自機狙い攻撃の対象を予告
-    execute if score @s 93.AnimationTimer matches 11 run data modify storage api: Argument.ID set value 8009
-    execute if score @s 93.AnimationTimer matches 11 at @e[type=marker,tag=93.Marker.SpawnPoint,distance=..80,sort=nearest,limit=1] positioned ~ ~-2.25 ~ run function api:object/summon
-    execute if score @s 93.AnimationTimer matches 11..60 as @e[type=item_display,tag=8009.Line,tag=93.Object] at @s run function asset:mob/0327.eclael/tick/app.skill_events/31_latter_field_thunder/chain_type/prediction_line
+    execute if score @s 93.AnimationTimer matches 13 run data modify storage api: Argument.ID set value 8009
+    execute if score @s 93.AnimationTimer matches 13 at @e[type=marker,tag=93.Marker.SpawnPoint,distance=..80,sort=nearest,limit=1] positioned ~ ~-2.25 ~ run function api:object/summon
+    execute if score @s 93.AnimationTimer matches 13..60 as @e[type=item_display,tag=8009.Line,tag=93.Object] at @s run function asset:mob/0327.eclael/tick/app.skill_events/31_latter_field_thunder/chain_type/prediction_line
 
 # 攻撃範囲表示(あくまで雷の通り道を示すため点滅させる)
     execute if predicate api:global_vars/difficulty/max/2_hard if score @s 93.AnimationTimer matches 13 run function asset:mob/0327.eclael/tick/app.skill_events/31_latter_field_thunder/chain_type/prediction.m {Width:7}

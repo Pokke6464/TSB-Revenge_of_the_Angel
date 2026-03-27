@@ -10,7 +10,7 @@
 # 攻撃位置表示
     data modify storage api: Argument.ID set value 2063
     execute store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
-    data modify storage api: Argument.FieldOverride.Color set value 6618980
+    data modify storage api: Argument.FieldOverride.Color set value 6617700
     execute if predicate api:global_vars/difficulty/max/2_hard run data modify storage api: Argument.FieldOverride.Scale set value [7f, 7f, 0.05f]
     execute if predicate api:global_vars/difficulty/min/3_blessless unless entity @s[tag=2206.Small] run data modify storage api: Argument.FieldOverride.Scale set value [10f, 10f, 0.05f]
     execute if predicate api:global_vars/difficulty/min/3_blessless if entity @s[tag=2206.Small] run data modify storage api: Argument.FieldOverride.Scale set value [7f, 7f, 0.05f]

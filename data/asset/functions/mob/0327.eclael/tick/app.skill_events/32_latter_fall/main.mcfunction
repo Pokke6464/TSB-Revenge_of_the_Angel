@@ -24,7 +24,7 @@
             execute if score @s 93.AnimationTimer matches 10 run particle flash ~ ~1 ~ 0 0 0 0 1
 
 # 落下
-    execute if score @s 93.AnimationTimer matches 60 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/animation_1
+    execute if score @s 93.AnimationTimer matches 60 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/animation_1.m {duration:1, to_frame:1}
     # 攻撃
         execute if score @s 93.AnimationTimer matches 39 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/attack_fall
     # 衝撃波
@@ -41,6 +41,9 @@
             execute if score @s 93.AnimationTimer matches 67 run playsound entity.wither.shoot hostile @a[distance=..30] ~ ~ ~ 0.5 1.8 0.5
             execute if score @s 93.AnimationTimer matches 67 run playsound entity.guardian.attack hostile @a ~ ~ ~ 2 1.8
             execute if score @s 93.AnimationTimer matches 75 run playsound entity.ender_dragon.flap hostile @a ~ ~ ~ 2 1
+    # 強化後半戦なら回転斬りまで少し短縮
+        execute if score @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] 93.AnimationTimer matches 95 run scoreboard players set @s 93.AnimationTimer 105
+        execute if score @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] 93.AnimationTimer matches 115 run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/animation_1.m {duration:5, to_frame:57}
 
 
 # 無敵
@@ -71,4 +74,5 @@
         execute if score @s 93.AnimationTimer matches 210 run playsound minecraft:item.trident.return hostile @a ~ ~ ~ 2 1.5
 
 # 終了
+    execute if score @s[tag=93.Phase.Latter.Extra,tag=!93.LowHP] 93.AnimationTimer matches 254.. run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/end
     execute if score @s 93.AnimationTimer matches 264.. run function asset:mob/0327.eclael/tick/app.skill_events/32_latter_fall/end
