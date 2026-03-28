@@ -124,6 +124,7 @@
     #declare tag 93.ModelRoot.Death animated_javaモデルにつける処理簡略化用のタグ(死亡処理用)
     #declare tag 93.Marker.SpawnPoint 召喚中心点の記録用Marker
     #declare tag 93.Aec.AttackPos 攻撃処理の保存用AEC
+    #declare tag 93.Aec.AttackPos_2 攻撃処理の保存用AECその2(RotA)
     #declare tag 93.Aec.AttackPos.Init 攻撃処理の保存用AEC
     #declare tag 93.Phase.Latter 後半戦
     #declare tag 93.Phase.HardLatter ハード後半戦

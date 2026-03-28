@@ -100,8 +100,9 @@
             data modify storage asset:mob Field.Damage.UpperLatter set value 52.0f
         # 射撃
             data modify storage asset:mob Field.Damage.ShotLatter set value 40.0f
-    # 光速攻撃
-            data modify storage asset:mob Field.Damage.LightSpeedAttack set value 50.0f
+    # 光速攻撃・自重消失モードは回避難易度が高すぎるため火力低下
+            execute unless data storage rota: {RuthlessMode:1b} run data modify storage asset:mob Field.Damage.LightSpeedAttack set value 50.0f
+            execute if data storage rota: {RuthlessMode:1b} run data modify storage asset:mob Field.Damage.LightSpeedAttack set value 35.0f
     # 最後の切り札
         # 落雷
             data modify storage asset:mob Field.Damage.LastAttack0 set value 30.0f

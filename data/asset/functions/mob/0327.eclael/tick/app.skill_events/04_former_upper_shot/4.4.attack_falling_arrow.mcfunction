@@ -119,10 +119,12 @@
 
 # エクレールに当たった場合
     execute positioned ~ ~-1 ~ if entity @s[distance=..2] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/6.start_damage_animation
-    # 当たった場合はここでkill
-        execute positioned ~ ~-1 ~ if entity @s[distance=..2] run return run kill @e[type=area_effect_cloud,tag=93.Aec.AttackPos,distance=..5,sort=nearest,limit=1]
 
-# 紅い雷を召喚
+# エクレールに当たった場合や、自重消失モードではないならここでkill
+    execute positioned ~ ~-1 ~ if entity @s[distance=..2] positioned ~ ~1 ~ run return run kill @e[type=area_effect_cloud,tag=93.Aec.AttackPos,distance=..5,sort=nearest,limit=1]
+    execute unless data storage rota: {RuthlessMode:1b} run return run kill @e[type=area_effect_cloud,tag=93.Aec.AttackPos,distance=..5,sort=nearest,limit=1]
+
+# 自重消失モードなら紅い雷を召喚
     data modify storage api: Argument.ID set value 8001
     execute store result storage api: Argument.FieldOverride.MobUUID int 1 run scoreboard players get @s MobUUID
     data modify storage api: Argument.FieldOverride.Small set value true
