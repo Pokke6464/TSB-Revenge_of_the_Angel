@@ -18,7 +18,7 @@
     #declare tag 1J.ToTheLeft 左に薙ぎ払う(RotA)
     #declare tag 1J.HyperBeam.Hit 巨大ビームのヒット検知(RotA)
 
-    #declare tag 1J.HealthIsBelowHalf HP半分以下(RotA)
+    #declare tag 1J.HealthLess50Per HP50%以下(RotA)
     #declare tag 1J.Phase.2 フェーズ2(RotA)
     #declare tag 1J.AttackMode 後半戦で距離を取らず攻撃的になる(RotA)
     #declare tag 1J.PrepareReverse 逆回転の準備(RotA)

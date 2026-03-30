@@ -25,5 +25,8 @@
     execute if entity @s[tag=1J.InAction] run function asset:mob/0055.hetukedah/tick/skill_active
 
 # 演出
-    execute positioned ~ ~1 ~ run particle minecraft:dust 1 0 1 0.5 ^ ^ ^ 0.15 0.15 0.15 0 30 force @a[distance=..30]
-    execute positioned ~ ~1 ~ run particle minecraft:dust 0.5 0 0.5 0.5 ^ ^ ^ 0.08 0.08 0.08 0 10 force @a[distance=..30]
+    execute if entity @s[tag=!1J.Phase.2,tag=!1J.Skill.ChangePhase] positioned ~ ~1 ~ run particle minecraft:dust 1 0 1 0.5 ^ ^ ^ 0.15 0.15 0.15 0 30 force @a[distance=..30]
+    execute if entity @s[tag=!1J.Phase.2,tag=!1J.Skill.ChangePhase] positioned ~ ~1 ~ run particle minecraft:dust 0.5 0 0.5 0.5 ^ ^ ^ 0.08 0.08 0.08 0 10 force @a[distance=..30]
+    # 後半戦
+        execute if entity @s[tag=1J.Phase.2] positioned ~ ~1 ~ run particle minecraft:dust 0 0 0 0.5 ^ ^ ^ 0.15 0.15 0.15 0 30 force @a[distance=..30]
+        execute if entity @s[tag=1J.Phase.2] positioned ~ ~1 ~ run particle minecraft:dust 0.5 0.5 0.5 0.5 ^ ^ ^ 0.08 0.08 0.08 0 10 force @a[distance=..30]

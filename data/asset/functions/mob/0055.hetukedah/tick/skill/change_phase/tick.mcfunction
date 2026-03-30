@@ -14,6 +14,12 @@
     execute if score @s General.Mob.Tick matches 40 run particle enchant ~ ~4 ~ 0.1 0.1 0.1 15 150 force @a[distance=..30]
     execute if score @s General.Mob.Tick matches 40..85 run particle dust 0.5 0 0.5 2 ~ ~1.5 ~ 1 1 1 0 4 force @a[distance=..30]
 
+# 下から常に出ているパーティクルをフェーズ移行中はここで表示(フェーズ2の識別用タグはこの行動が完全に終了した時に付与されるため)
+    execute if score @s General.Mob.Tick matches 0..94 run particle dust 1 0 1 0.5 ~ ~1 ~ 0.15 0.15 0.15 0 30 force @a[distance=..30]
+    execute if score @s General.Mob.Tick matches 0..94 run particle dust 0.5 0 0.5 0.5 ~ ~1 ~ 0.08 0.08 0.08 0 10 force @a[distance=..30]
+    execute if score @s General.Mob.Tick matches 95.. run particle dust 0 0 0 0.5 ~ ~1 ~ 0.08 0.08 0.08 0 10 force @a[distance=..30]
+    execute if score @s General.Mob.Tick matches 95.. run particle dust 0.5 0.5 0.5 0.5 ~ ~1 ~ 0.08 0.08 0.08 0 10 force @a[distance=..30]
+
 # 後ろに下がる
     execute if score @s General.Mob.Tick matches 1..7 positioned ^ ^ ^-0.5 if block ~ ~ ~ #lib:no_collision if block ~ ~1 ~ #lib:no_collision run tp @s ~ ~ ~ ~ ~
     execute if score @s General.Mob.Tick matches 8..12 positioned ^ ^ ^-0.2 if block ~ ~ ~ #lib:no_collision if block ~ ~1 ~ #lib:no_collision run tp @s ~ ~ ~ ~ ~

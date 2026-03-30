@@ -9,6 +9,6 @@
     particle flash ~ ~1.5 ~ 1 1 1 0 20 force @a[distance=..30]
 
 # 装備アイテムの変更
-    item replace entity @s weapon.mainhand with stick{Count:1b,Enchantments:[{}],CustomModelData:20013}
-    item replace entity @s weapon.offhand with stick{Count:1b,Enchantments:[{}],CustomModelData:20014}
-    item replace entity @s armor.head with stick{Count:1b,Enchantments:[{}],CustomModelData:20015}
+    item replace entity @s weapon.mainhand with stick{CustomModelData:80010}
+    item replace entity @s weapon.offhand with stick{CustomModelData:80011}
+    item replace entity @s armor.head with stick{CustomModelData:80012}

@@ -20,7 +20,7 @@
     effect clear @s speed
 
 # タグ付与
-    tag @s add 1J.HealthIsBelowHalf
+    tag @s add 1J.HealthLess50Per
 
 # フェーズ移行演出を再生
     tag @s add 1J.InAction
