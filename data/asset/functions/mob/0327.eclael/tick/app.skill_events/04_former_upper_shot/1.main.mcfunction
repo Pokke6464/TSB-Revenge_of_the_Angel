@@ -21,7 +21,7 @@
     execute if score @s 93.AnimationTimer matches 15..25 run particle electric_spark ^0.2 ^1.9 ^0.1 0 0 0 1 5
 # 攻撃地点決定
     execute if score @s 93.AnimationTimer matches 5..25 run scoreboard players add @s 93.SubTimer 1
-    execute if score @s 93.AnimationTimer matches 5..25 if score @s 93.SubTimer matches 2.. at @a[tag=!PlayerShouldInvulnerable,distance=..30,sort=random,limit=1] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.decide_attack_pos
+    execute if score @s 93.AnimationTimer matches 5..25 if score @s 93.SubTimer matches 2.. at @a[tag=!PlayerShouldInvulnerable,distance=..80,sort=random,limit=1] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.decide_attack_pos
 
 ## 射撃
 # animated javaアニメーション再生 (長さ：55tick)
@@ -43,7 +43,7 @@
     execute if score @s 93.AnimationTimer matches 55..75 run particle electric_spark ^0.2 ^1.9 ^0.1 0 0 0 1 5
 # プレイヤー狙いの攻撃地点決定
     execute if score @s 93.AnimationTimer matches 55..75 run scoreboard players add @s 93.SubTimer 1
-    execute if score @s 93.AnimationTimer matches 55..75 if score @s 93.SubTimer matches 2.. positioned as @a[tag=!PlayerShouldInvulnerable,distance=..30] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.1.decide_attack_pos_player
+    execute if score @s 93.AnimationTimer matches 55..75 if score @s 93.SubTimer matches 2.. positioned as @a[tag=!PlayerShouldInvulnerable,distance=..80,limit=5] run function asset:mob/0327.eclael/tick/app.skill_events/04_former_upper_shot/4.1.1.decide_attack_pos_player
 
 ## 射撃2
 # animated javaアニメーション再生 (長さ：55tick)

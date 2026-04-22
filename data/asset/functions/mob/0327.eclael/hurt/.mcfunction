@@ -18,14 +18,14 @@
     execute if data storage rota: {RuthlessMode:1b} if entity @s[tag=!93.LowHP] run function asset:mob/0327.eclael/hurt/start_last_attack
 
 # 効果音(とある都合上フェーズ変更よりも後に処理しないといけないため順序変更)
-    execute if entity @s[tag=!93.Temp.PrepareGuard,tag=!93.Temp.Guard] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
+    execute if entity @s[tag=!93.Temp.Guard] run playsound entity.player.hurt hostile @a ~ ~ ~ 1 1
     execute if entity @s[tag=93.Temp.Guard] run playsound item.shield.block hostile @a ~ ~ ~ 1 2
 
 # ガード処理
     # ガード継続
-        execute if entity @s[tag=93.Temp.PrepareGuard,tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/14.continue_guard_animation
+        execute if data storage asset:context Hurt{IsDoT:false} if entity @s[tag=93.Temp.PrepareGuard,tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/14.continue_guard_animation
     # ガード開始
-        execute if entity @s[tag=93.Temp.PrepareGuard] unless entity @s[tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/13.start_guard_animation
+        execute if data storage asset:context Hurt{IsDoT:false} if entity @s[tag=93.Temp.PrepareGuard] unless entity @s[tag=93.Temp.Guard] run function asset:mob/0327.eclael/tick/app.general/13.start_guard_animation
 
 # 特殊怯み処理
     # 居眠り
