@@ -25,3 +25,5 @@
         data modify storage asset:object Field.HitboxDelay set value 0
     # 最初に何Tickスキップするか。例えば10の場合は10tick分衝撃波が広がった状態から始まる。残留時間や当たり判定の遅延も影響を受けるため注意。
         data modify storage asset:object Field.SkipTick set value 0
+    # 追加で付与するタグのリスト。継承先で使うことを想定している。
+        # data modify storage asset:object Field.Tags set value [""]

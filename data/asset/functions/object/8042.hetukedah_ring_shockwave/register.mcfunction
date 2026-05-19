@@ -20,3 +20,4 @@
         data modify storage asset:object Field.Color set value 8388736
         data modify storage asset:object Field.Speed set value 0.75
         data modify storage asset:object Field.Tick set value 80
+        data modify storage asset:object Field.Tags set value ["1J.Object"]

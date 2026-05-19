@@ -17,4 +17,4 @@
 # ID (int)
     data modify storage asset:object ID set value 8008
 # フィールド(オプション)
-    # data modify storage asset:object Field.myValue set value 
+    data modify storage asset:object Field.Tags set value ["93.Object"]
